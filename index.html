@@ -469,8 +469,12 @@
 
         <!-- Topic Selection Area -->
         <div class="checkbox-container">
-            <div><input type="checkbox" id="skin51fmt1" name="skin51fmt1" value="skin51fmt1"><label
-                    for="skin51fmt1">Formative 1</label></div>
+            <div><input type="checkbox" id="skin52fmt1" name="skin52fmt1" value="skin52fmt1"><label for="skin52fmt1">Formative
+                    1</label></div>
+            <div><input type="checkbox" id="skin52fmt2" name="skin52fmt2" value="skin52fmt2"><label for="skin52fmt2">Formative
+                    2</label></div>
+            <div><input type="checkbox" id="skin52fmt3" name="skin52fmt3" value="skin52fmt3"><label for="skin52fmt3">Formative
+                    3</label></div>
             <div><input type="checkbox" id="skin51mcq1" name="skin51mcq1" value="skin51mcq1"><label
                     for="skin51mcq1">MCQ51_1</label></div>
             <div><input type="checkbox" id="skin50mcq1" name="skin50mcq1" value="skin50mcq1"><label
@@ -584,7 +588,7 @@
         $(function () {
             // --- DATA ---
             var quizdata = {
-                skin51_formative1: [
+                skin52_formative1: [
                     {
                         "problem": "1. Which of the following is a factor that contributes to an increased body temperature?",
                         "img": "",
@@ -709,6 +713,550 @@
                         "answer": "Mesenchyme",
                         "select": "",
                         "explain": "Epithelium จะได้รับสัญญาณจ าพวก WNT และ Fibroblast growth factor (FGF) เป็นสัญญาณแรกเพื่อเริ่มกระบวนการเจริญไปในทิศทางใดทิศทางหนึ่ง เนื่องจากอนุพันธ์ของผิวหนัง(Skin derivatives) จะอยู่ถัดลงไปใต้ผิวหนัง ดังนั้นต้นกำเนิดของสัญญาณแรกควรมีตำแหน่งที่อยู่ถัดลงไปใต้ผิวหนังเช่นกัน นั่นก็คือ Mesenchyme",
+                        "state": false
+                    }
+                ],
+                skin52_formative2: [
+                    {
+                        problem: "1. A 32-year-old female presents with a facial skin problem around the nose and cheeks. Physical examination reveals rosacea-like skin lesions with red papules and scales. Skin scraping reveals ectoparasites. Which of the following is the most likely diagnosis?",
+                        img: "",
+                        choices: "Demodicosis///Blepharitis///Pediculosis///Phthiriasis///Scabies",
+                        answer: "Demodicosis",
+                        select: "",
+                        explain: "ผู้ป่วยมีอาการ rosacea-like lesion ร่วมกับตรวจพบเชื้อ ectoparasites จากการขูดผิวหนัง (skin scraping) ซึ่งลักษณะที่เข้าได้มากที่สุดคือ Demodicosis ซึ่งเกิดจากไร Demodex spp. ซึ่งเป็นไรที่อาศัยอยู่ตามรูขุมขนและต่อมไขมันบนใบหน้า การเพิ่มจำนวนของไรชนิดนี้มีความสัมพันธ์กับการเกิดโรค Rosacea และผื่นผิวหนังอักเสบคล้าย Rosacea ส่วน Blepharitis คือการอักเสบของเปลือกตา, Pediculosis คือการติดเชื้อจากเหา, Phthiriasis คือการติดเชื้อจากโลน และ Scabies คือโรคหิดซึ่งมักมีรอยโรคตามง่ามมือ ข้อมือ และไม่ค่อยมีลักษณะคล้าย Rosacea บนใบหน้า",
+                        state: false
+                    },
+                    {
+                        problem: "2. Which is the correct match between a pathognomonic lesion and its corresponding arthropod infestation?",
+                        img: "",
+                        choices: "Pustules - Tick bite///Bullseye rash - Flea bite///Papular urticaria - Mosquito bite///Burrows sign - Scabies///Grey-blue macules - Head lice infestation",
+                        answer: "Burrows sign - Scabies",
+                        select: "",
+                        explain: "Pathognomonic lesion คือรอยโรคที่จำเพาะเจาะจงกับโรคใดโรคหนึ่ง 'Burrows sign' หรือร่องขุดของไรหิด เป็นลักษณะที่จำเพาะของโรคหิด (Scabies) ที่สุดในตัวเลือกนี้ ส่วนข้ออื่นๆ: Bullseye rash (Erythema migrans) จำเพาะกับโรค Lyme disease ซึ่งมียุงเป็นพาหะ ไม่ใช่หมัด (Flea) Grey-blue macules (Maculae ceruleae) จำเพาะกับการติดเชื้อโลน (Phthiriasis) ไม่ใช่เหา (Head lice) Pustules และ Papular urticaria สามารถเกิดได้จากแมลงหลายชนิด ไม่ได้จำเพาะเจาะจง",
+                        state: false
+                    },
+                    {
+                        problem: "3. Which is the correct match between activity and the corresponding arthropod infestation?",
+                        img: "",
+                        choices: "Kindergarten school children sleeping during the day - Dog flea bite///Tourist camping near a lake - Bedbug bite///Residents living in urban high-rise buildings - Chigger bite///Animal keeper working on a livestock farm - Stable flies bite///Swimming in freshwater lakes - Tick bite",
+                        answer: "Animal keeper working on a livestock farm - Stable flies bite",
+                        select: "",
+                        explain: "Stable flies (Stomoxys calcitrans) เป็นแมลงวันที่ดูดเลือดซึ่งพบได้มากในบริเวณฟาร์มปศุสัตว์ ดังนั้นคนเลี้ยงสัตว์จึงมีความเสี่ยงสูงที่จะถูกกัด ส่วนตัวเลือกอื่นมีความสัมพันธ์น้อยกว่า เช่น Chiggers (ไรแดง) มักพบในพงหญ้าหรือป่า ไม่ใช่ตึกสูงในเมือง การไปแค้มป์ปิ้งอาจเจอตัวเรือด (Bedbug) ได้ แต่ไม่ได้จำเพาะเท่าไร และการว่ายน้ำในทะเลสาบมีความเสี่ยงต่อ Cercarial dermatitis (swimmer's itch) มากกว่าการถูกเห็บกัด",
+                        state: false
+                    },
+                    {
+                        problem: "4. A 10-year-old girl presents to the clinic with a history of recurrent wheezing and urticaria, particularly at night and in the early morning. The family has no pets, but their home is carpeted, and they use heavy curtains. Which of the following is the most likely causative agent for her symptoms?",
+                        img: "",
+                        choices: "Scabies mite///House dust mite///Rat flea///Trombicula mite///Fowl mite",
+                        answer: "House dust mite",
+                        select: "",
+                        explain: "อาการภูมิแพ้ (wheezing and urticaria) ที่เป็นมากตอนกลางคืนและช่วงเช้า ร่วมกับสิ่งแวดล้อมในบ้านที่มีพรมและผ้าม่านหนาซึ่งเป็นแหล่งสะสมฝุ่น เป็นลักษณะคลาสสิกของอาการแพ้ไรฝุ่นบ้าน (House dust mite allergy) สารก่อภูมิแพ้คือมูลของไรฝุ่นที่สะสมอยู่ในที่นอน พรม และผ้าม่าน",
+                        state: false
+                    },
+                    {
+                        problem: "5. A 9-year-old boy from Cambodia presents with high fever, sore throat, and a rash. The physical exam reveals a diffuse, finely papular erythematous rash, accentuated in the groin and axilla, and a red tongue with prominent papillae. The most likely causative agent produces which of the following toxins responsible for the rash?",
+                        img: "",
+                        choices: "C5a peptidase///Streptococcal pyrogenic exotoxin///Capsule///Streptolysin O///Coagulase",
+                        answer: "Streptococcal pyrogenic exotoxin",
+                        select: "",
+                        explain: "ลักษณะทางคลินิกที่กล่าวมา ได้แก่ ไข้สูง เจ็บคอ ลิ้นแดงเป็นตุ่ม (strawberry tongue) และผื่นแดงสากคล้ายกระดาษทราย (sandpaper rash) ที่เป็นมากตามซอกพับ เป็นอาการคลาสสิกของโรค Scarlet fever ซึ่งเกิดจากการติดเชื้อ Streptococcus pyogenes ที่สร้างสารพิษกลุ่ม Streptococcal pyrogenic exotoxins (Spe) สารพิษนี้ทำหน้าที่เป็น superantigen กระตุ้นให้เกิดปฏิกิริยาภูมิคุ้มกันทั่วร่างกายและทำให้เกิดผื่นดังกล่าว",
+                        state: false
+                    },
+                    {
+                        problem: "6. A 3-year-old boy is brought to the ER with fever, irritability, and skin peeling. Two days ago, he developed painful erythema around his mouth and neck, which spread to the trunk. His skin is tender and shows large areas of superficial desquamation, along with positive Nikolsky sign. No mucosal involvement is noted. Which of the following best explains the pathogenesis?",
+                        img: "",
+                        choices: "Immune complex deposition in the skin///Superantigen-mediated cytokine release///Autoantibody formation against desmoglein-3///Direct invasion of dermis by bacteria///Exotoxin-mediated cleavage of desmoglein-1",
+                        answer: "Exotoxin-mediated cleavage of desmoglein-1",
+                        select: "",
+                        explain: "อาการที่แสดงคือ Staphylococcal Scalded Skin Syndrome (SSSS) ซึ่งเกิดจากเชื้อ Staphylococcus aureus ที่สร้างสารพิษ Exfoliative toxins (A และ B) สารพิษนี้จะเข้าไปตัดโปรตีน Desmoglein-1 ซึ่งเป็นส่วนประกอบของ desmosome ที่ยึดเซลล์ผิวหนังชั้น stratum granulosum ทำให้ผิวหนังชั้นบนหลุดลอกออกจากกันได้ง่าย (positive Nikolsky sign) โดยที่ไม่มีการอักเสบของเยื่อบุ (mucosal involvement) ซึ่งช่วยแยกจากโรค TEN",
+                        state: false
+                    },
+                    {
+                        problem: "7. A 22-year-old man presents to the emergency department after stepping on a rusty nail while working outdoors. The wound is puncture-type, approximately 1 cm deep, and contaminated with soil. He received his last tetanus toxoid vaccine 8 years ago and completed the full childhood vaccination series. What is the most appropriate management for this patient?",
+                        img: "",
+                        choices: "Tetanus immune globulin (TIG)///Both tetanus toxoid vaccine and TIG///Cloxacillin treatment///Tetanus toxoid vaccine (Td or Tdap)///Wound suture",
+                        answer: "Tetanus toxoid vaccine (Td or Tdap)",
+                        select: "",
+                        explain: "ผู้ป่วยมีบาดแผลที่เสี่ยงต่อบาดทะยัก (ลึกและปนเปื้อนดิน) และได้รับวัคซีนเข็มสุดท้ายนานกว่า 5 ปีแล้ว (8 ปี) ตามแนวทางการป้องกันโรคบาดทะยัก ผู้ป่วยที่ได้รับวัคซีนครบชุดในวัยเด็ก แต่ได้รับเข็มกระตุ้นนานกว่า 5 ปี เมื่อมีบาดแผลที่เสี่ยงสูง ควรได้รับการฉีดวัคซีนกระตุ้น (Td หรือ Tdap) 1 เข็ม ไม่จำเป็นต้องให้ Tetanus immune globulin (TIG) เนื่องจากมีประวัติได้รับวัคซีนครบ 3 เข็มขึ้นไปแล้ว",
+                        state: false
+                    },
+                    {
+                        problem: "8. A 65-year-old man with a history of thrombocytopenia received a platelet transfusion. Within 24 hours, he developed fever, chills, and hypotension. Blood cultures from both the patient and the platelet bag grew Cutibacterium acnes. What is the most likely source of this bloodstream infection?",
+                        img: "",
+                        choices: "Contamination during venipuncture for blood culture collection///Secondary infection due to immunosuppression///Reactivation of endogenous C. acnes infection///Skin contamination during platelet transfusion///Transfusion of platelets contaminated with C. acnes",
+                        answer: "Transfusion of platelets contaminated with C. acnes",
+                        select: "",
+                        explain: "การตรวจพบเชื้อแบคทีเรียชนิดเดียวกัน (Cutibacterium acnes) ทั้งในเลือดของผู้ป่วยและในถุงเกล็ดเลือดที่ให้ เป็นหลักฐานที่ชัดเจนที่สุดว่าการติดเชื้อนั้นมาจากการรับเลือดที่มีการปนเปื้อน (transfusion-transmitted infection) ซึ่งเชื้อ C. acnes เป็นเชื้อที่พบบนผิวหนังและอาจปนเปื้อนเข้าไปในถุงเกล็ดเลือดตั้งแต่ขั้นตอนการบริจาคหรือการเตรียมเกล็ดเลือด",
+                        state: false
+                    },
+                    {
+                        problem: "9. A 42-year-old leather worker presents with a painless, black-centered ulcer on his forearm surrounded by marked non-pitting edema. The lesion began as a papule 3 days ago after handling imported animal hides. Gram stain from the lesion shows large, Gram-positive rods in chains. Which of the following virulence factors is primarily responsible for the skin lesion?",
+                        img: "",
+                        choices: "Lethal factor///Edema toxin///Protein A///Streptolysin O///Poly-D-glutamate capsule",
+                        answer: "Edema toxin",
+                        select: "",
+                        explain: "ประวัติและลักษณะรอยโรคเป็นลักษณะคลาสสิกของโรคแอนแทรกซ์ที่ผิวหนัง (Cutaneous anthrax) เกิดจากเชื้อ Bacillus anthracis รอยโรคนี้เกิดจากสารพิษ 2 ชนิดคือ Edema toxin และ Lethal toxin ตัว Edema toxin (EF+PA) จะทำหน้าที่เป็น adenylate cyclase ทำให้มีระดับ cAMP ในเซลล์สูงขึ้นอย่างมาก ส่งผลให้เกิดการบวม (edema) ที่รุนแรงและไม่ยุบเมื่อกด (non-pitting edema) ส่วน Lethal toxin (LF+PA) จะทำให้เซลล์ตายและเกิดเป็นเนื้อตายสีดำ (eschar) ตรงกลางแผล ดังนั้น Edema toxin จึงเป็นตัวการหลักที่ทำให้เกิดอาการบวมซึ่งเป็นลักษณะเด่นของรอยโรคนี้",
+                        state: false
+                    },
+                    {
+                        problem: "10. A 56-year-old man with acute myeloid leukemia undergoing chemotherapy presents with fever and chills. His temperature is 39.4°C, blood pressure is 88/52 mmHg, and heart rate is 120 bpm. On exam, he has multiple painless, round ulcers with black eschars and surrounding erythema on the thigh and lower abdomen. The lesions developed rapidly over 24 hours. Blood cultures are pending. Which of the following pathogens is most strongly associated with this patient's skin lesions and likely bacteremia?",
+                        img: "",
+                        choices: "Streptococcus pyogenes///Staphylococcus aureus///Candida albicans///Bacillus anthracis///Pseudomonas aeruginosa",
+                        answer: "Pseudomonas aeruginosa",
+                        select: "",
+                        explain: "รอยโรคแผลเปื่อย ไม่เจ็บ มีเนื้อตายสีดำตรงกลาง (black eschars) ที่เกิดขึ้นอย่างรวดเร็วในผู้ป่วยที่มีภาวะภูมิคุ้มกันบกพร่องรุนแรง (เช่น neutropenia จากเคมีบำบัด) เป็นลักษณะจำเพาะของ Ecthyma gangrenosum ซึ่งเป็นรอยโรคที่ผิวหนังที่เกิดจากการติดเชื้อในกระแสเลือดของเชื้อ Pseudomonas aeruginosa เชื้อจะแพร่กระจายไปที่หลอดเลือดเล็กๆที่ผิวหนัง ทำให้เกิดการอุดตันและเนื้อเยื่อตาย",
+                        state: false
+                    },
+                    {
+                        problem: "11. A 29-year-old man worried about many white skin lesions occurring on his chest as shown in the figure. His skin-scraping specimen was sent to investigate with KOH preparation. The tissue form supported the diagnosis of tinea versicolor. What is the tissue form of a causative agent?",
+                        img: "https://drive.google.com/open?id=1C_SdxPl1_Dg35dGrHYHI1e0ODRlIKbqc&usp=drive_copy",
+                        choices: "Chain of arthrospores and pseudohyphae///Budding yeast cells and short hyphae///Branching septate hyphae///Branching coenocytic hyphae and sporangiospores///Encapsulated budding yeast cells",
+                        answer: "Budding yeast cells and short hyphae",
+                        select: "",
+                        explain: "โรคเกลื้อน (Tinea versicolor หรือ Pityriasis versicolor) เกิดจากเชื้อราในกลุ่ม Malassezia spp. เมื่อนำขุยจากผิวหนังไปย้อมด้วย KOH แล้วส่องดูด้วยกล้องจุลทรรศน์ จะพบเชื้อในรูปของเซลล์ยีสต์ที่กำลังแตกหน่อ (budding yeast cells) อยู่กันเป็นกลุ่ม และสายราเทียมสั้นๆ (short hyphae) ลักษณะดังกล่าวนี้มักถูกเปรียบเทียบว่าเป็น 'spaghetti and meatballs' ซึ่งเป็นลักษณะที่จำเพาะของโรคนี้",
+                        state: false
+                    },
+                    {
+                        problem: "12. A man suffered from skin lesions on his hand as shown in the figure 1. The fungal characters from KOH preparation and fungal cultivation were shown in the figure 2 and 3, respectively. What is the diagnosis and what is the causative fungus?",
+                        img: "https://drive.google.com/open?id=18kD7KUhBYet76fPjBkKAcAZET3O2wtbY&usp=drive_copy",
+                        choices: "Tinea imbricate, Trichophyton sp.///Tinea favosa, Microsporum sp.///Tinea manuum, Microsporum sp.///Tinea unguium, Epidermophyton sp.///Tinea nigra, Trichophyton sp.",
+                        answer: "Tinea manuum, Microsporum sp.",
+                        select: "",
+                        explain: "จาก Figure 1 รอยโรคที่มือคือ Tinea manuum (กลากที่มือ) จาก Figure 3 ซึ่งเป็นการเพาะเชื้อ แสดงให้เห็น macroconidia ที่มีขนาดใหญ่ รูปกระสวย (spindle-shaped) ผนังหนา และมีผนังกั้นหลายอัน ซึ่งเป็นลักษณะจำเพาะของเชื้อราในจีนัส Microsporum ดังนั้นการวินิจฉัยที่ถูกต้องที่สุดคือ Tinea manuum ที่เกิดจากเชื้อ Microsporum sp.",
+                        state: false
+                    },
+                    {
+                        problem: "13. A 10-year-old boy is brought to the emergency department after being stung multiple times by insects while playing outdoors. His mother states he was surrounded by several large black-and-yellow flying insects before suddenly screaming and running away. On arrival, he is alert but crying, with multiple painful wheals on his arms and neck. Ten minutes after arrival, he develops generalized urticaria, facial swelling, and audible wheezing. His blood pressure is 78/54 mmHg. Which of the following is the best immediate management for this patient?",
+                        img: "",
+                        choices: "Oral antibiotic///IV fluids///Paracetamol orally///Local ice packs///IM epinephrine",
+                        answer: "IM epinephrine",
+                        select: "",
+                        explain: "ผู้ป่วยมีอาการและอาการแสดงของการแพ้อย่างรุนแรง (Anaphylaxis) ซึ่งเกิดขึ้นอย่างรวดเร็วหลังถูกแมลง (น่าจะเป็นต่อหรือแตน) ต่อย โดยมีอาการในหลายระบบพร้อมกัน ได้แก่ ผิวหนัง (urticaria, facial swelling) ระบบทางเดินหายใจ (wheezing) และระบบหัวใจและหลอดเลือด (hypotension) การรักษาที่สำคัญที่สุดและต้องทำทันทีเพื่อช่วยชีวิตคือการฉีด Adrenaline (Epinephrine) เข้ากล้ามเนื้อ (IM) เพื่อแก้ไขภาวะหลอดลมตีบและภาวะความดันโลหิตต่ำ",
+                        state: false
+                    },
+                    {
+                        problem: "14. A 35-year-old woman from rural Laos presents with intense, burning pain and swelling in her right foot, several hours after accidentally stepping on an arthropod while collecting firewood at dusk. On examination, there is local erythema and mild edema, and she describes a sensation of tingling. She brings the dead animal, which is identified as a large centipede. Which of the following best describes the mechanism of envenomation causing her symptoms?",
+                        img: "",
+                        choices: "Injection of venom via mandible bites///Toxin delivered via stinger from the tail///Allergic reaction to arthropod body hairs///Passive absorption of toxin through skin contact///Toxin delivered via forcipules from the head",
+                        answer: "Toxin delivered via forcipules from the head",
+                        select: "",
+                        explain: "ตะขาบ (Centipede) ใช้เขี้ยวพิษที่เรียกว่า Forcipules ในการปล่อยพิษเพื่อป้องกันตัวหรือล่าเหยื่อ Forcipules นี้คือขาคู่แรกที่ดัดแปลงมาให้มีลักษณะคล้ายเขี้ยว อยู่บริเวณใต้ส่วนหัว ไม่ใช่การกัดด้วยขากรรไกร (mandibles) หรือการต่อยด้วยเหล็กไนที่หางเหมือนแมงป่อง",
+                        state: false
+                    },
+                    {
+                        problem: "15. A 29-year-old man from Chiang Rai province, Thailand, presents with a painless, slowly growing ulcer on his left arm. The lesion began as a small papule three months ago and has now become a well-demarcated ulcer with a raised, indurated border and a clean base. He recently returned from a rural area bordering Myanmar. What is the first-line treatment for this patient?",
+                        img: "",
+                        choices: "Dicloxacillin///Topical steroids///Ivermectin///Doxycycline///Amphotericin B",
+                        answer: "Amphotericin B",
+                        select: "",
+                        explain: "ลักษณะแผลเรื้อรังที่ไม่เจ็บ ขอบแผลนูนแข็ง (painless, indurated ulcer) ร่วมกับประวัติทางระบาดวิทยา (เชียงราย, ชายแดนพม่า) ทำให้นึกถึงโรค Cutaneous Leishmaniasis ซึ่งเป็นโรคติดเชื้อโปรโตซัวที่นำโดยริ้นฝอยทราย (sandfly) มากที่สุด การรักษามีหลายวิธีขึ้นกับชนิดของเชื้อและความรุนแรง แต่ในตัวเลือกที่ให้มา ยา Amphotericin B (โดยเฉพาะในรูปแบบ liposomal) เป็นยาที่มีประสิทธิภาพสูงในการรักษาโรค Leishmaniasis ทั้งชนิดที่ผิวหนังและชนิดที่กระจายในอวัยวะภายใน และเป็นตัวเลือกที่เหมาะสมที่สุดในบรรดา choices ที่ให้มาสำหรับโรคติดเชื้อปรสิตที่รุนแรงได้",
+                        state: false
+                    },
+                    {
+                        problem: "16. A 32-year-old male rice farmer from Ubon Ratchathani, Thailand, presents with a rapidly migrating, itchy, erythematous linear lesion on his abdomen. He reports the rash moves several centimeters per hour. He also has a recent history of loose stools and intermittent abdominal pain. His eosinophil count is elevated. Which of the following is the most likely diagnosis?",
+                        img: "",
+                        choices: "Cercarial dermatitis from animal schistosome///Sparganosis from Spirometra sp.///Cutaneous larva migrans from Ancylostoma braziliense///Strongyloides stercoralis infection causing larva currens///Gnathostoma spinigerum causing intermittent migratory swelling",
+                        answer: "Strongyloides stercoralis infection causing larva currens",
+                        select: "",
+                        explain: "ลักษณะผื่นคันที่เป็นเส้นนูนแดงเคลื่อนที่ได้เร็วมาก (หลายเซนติเมตรต่อชั่วโมง) เป็นลักษณะที่จำเพาะเจาะจง (pathognomonic) ของภาวะ Larva currens (แปลว่า racing larva) ซึ่งเกิดจากการติดเชื้อพยาธิเส้นด้าย Strongyloides stercoralis ในระยะ autoinfection ที่ตัวอ่อนพยาธิไชไปตามผิวหนังอย่างรวดเร็ว ซึ่งแตกต่างจาก Cutaneous larva migrans (พยาธิปากขอสัตว์) ที่จะเคลื่อนที่ได้ช้ากว่ามาก (มิลลิเมตรถึงเซนติเมตรต่อวัน) อาการทางระบบทางเดินอาหารและ Eosinophilia ก็สนับสนุนการวินิจฉัยนี้เช่นกัน",
+                        state: false
+                    },
+                    {
+                        problem: "17. A patient presents with a burn injury that involves the entire epidermis and extends down to the papillary region of the upper dermis. The wound is painful, erythematous, and moist, and forms blisters. What type of burn is this?",
+                        img: "",
+                        choices: "Full-thickness burn///Superficial partial-thickness burn///Superficial burn///Deep partial-thickness burn///Fourth-degree burn",
+                        answer: "Superficial partial-thickness burn",
+                        select: "",
+                        explain: "คำอธิบายของแผลไหม้ที่กินความลึกถึงชั้นหนังกำพร้าทั้งหมดและหนังแท้ชั้นบน (papillary dermis) มีอาการปวด แดง ชื้น และมีตุ่มน้ำพอง (blisters) เป็นลักษณะคลาสสิกของแผลไหม้ระดับ Superficial partial-thickness burn หรือ Second-degree burn ชนิดตื้น",
+                        state: false
+                    },
+                    {
+                        problem: "18. Which of the following is NOT typically included in the calculation of Total Body Surface Area (TBSA) burned for adult burn patients?",
+                        img: "",
+                        choices: "Superficial burns///Groin area///Entire trunk///Upper extremities///Entire head",
+                        answer: "Superficial burns",
+                        select: "",
+                        explain: "การคำนวณ TBSA (เช่นการใช้ Rule of Nines) มีวัตถุประสงค์เพื่อประเมินพื้นที่ของแผลไหม้ระดับ Partial-thickness (second-degree) และ Full-thickness (third-degree) เพื่อใช้ในการคำนวณปริมาณสารน้ำที่ต้องให้ทดแทน เราจะไม่นับรวมแผลไหม้ระดับ Superficial burn (first-degree) ซึ่งมีลักษณะแค่ผิวหนังแดงและไม่มีตุ่มน้ำพอง เพราะแผลชนิดนี้ไม่ได้ทำให้เกิดการสูญเสียสารน้ำออกจากร่างกายอย่างมีนัยสำคัญทางคลินิก",
+                        state: false
+                    },
+                    {
+                        problem: "19. A 60 kg adult female sustained full-thickness burns covering her entire left arm and the front of her trunk. Using the Parkland formula (4mL/kg/%TBSA), how much intravenous fluid (Lactated Ringer's) should she receive in the first 8 hours post-burn?",
+                        img: "",
+                        choices: "1080 mL///4320 mL///5400 mL///2160 mL///3240 mL",
+                        answer: "3240 mL",
+                        select: "",
+                        explain: "การคำนวณตามสูตร Parkland: 1. คำนวณ %TBSA โดยใช้ Rule of Nines: แขนซ้ายทั้งแขน = 9%, ลำตัวด้านหน้า = 18% ดังนั้น TBSA รวม = 9 + 18 = 27% 2. คำนวณปริมาณสารน้ำทั้งหมดใน 24 ชั่วโมง: 4 mL x น้ำหนัก (kg) x %TBSA = 4 x 60 x 27 = 6480 mL 3. คำนวณปริมาณสารน้ำใน 8 ชั่วโมงแรก: ตามสูตร Parkland จะให้ครึ่งหนึ่งของปริมาณทั้งหมดใน 8 ชั่วโมงแรก ดังนั้น = 6480 / 2 = 3240 mL",
+                        state: false
+                    },
+                    {
+                        problem: "20. Healing by first intention is characterized by which of the following?",
+                        img: "",
+                        choices: "Healing of a clean wound with well-approximated edges and minimal scar formation///Formation of a greater volume of granulation tissue leading to a larger scar///Large wounds with significant tissue deficits///More intense inflammation and abundant necrotic debris///Significant wound contraction to close large skin defects",
+                        answer: "Healing of a clean wound with well-approximated edges and minimal scar formation",
+                        select: "",
+                        explain: "Healing by first intention (หรือ primary union) คือกระบวนการหายของแผลที่สะอาด ไม่มีการติดเชื้อ และขอบแผลถูกเย็บหรือดึงมาชิดกันสนิท เช่น แผลผ่าตัด ลักษณะสำคัญคือมีการสูญเสียเนื้อเยื่อน้อย การอักเสบและการสร้าง granulation tissue น้อย ทำให้เกิดแผลเป็นขนาดเล็ก ส่วนตัวเลือกอื่นๆ (การสร้าง granulation tissue ปริมาณมาก, แผลขนาดใหญ่, การอักเสบรุนแรง, การหดรั้งของแผล) เป็นลักษณะของ Healing by second intention ซึ่งเกิดในแผลเปิดขนาดใหญ่หรือแผลติดเชื้อ",
+                        state: false
+                    },
+                    {
+                        problem: "21. A 5-year-old boy had skin lesions as follow. What is the most likely diagnosis?",
+                        img: "https://drive.google.com/open?id=1ZZsJ4vI8OP092M2B_gqJLrCQIxv0bDYE&usp=drive_copy",
+                        choices: "Furuncle///Folliculitis///Cellulitis///Ecthyma///Carbuncle",
+                        answer: "Furuncle",
+                        select: "",
+                        explain: "จากรูป ภาพแสดงตุ่มอักเสบแดงขนาดใหญ่ มีหัวหนองตรงกลาง (central pustule) ซึ่งเป็นการติดเชื้อของรูขุมขนที่ลึกลงไป 1 รูขุมขน ลักษณะนี้เรียกว่า Furuncle (ฝี) หากเป็นแค่การอักเสบตื้นๆของรูขุมขนจะเรียกว่า Folliculitis หากเป็นการรวมตัวของฝีหลายๆหัวติดกันจะเรียกว่า Carbuncle (ฝีฝักบัว)",
+                        state: false
+                    },
+                    {
+                        problem: "22. A farmer had severe cellulitis left leg with subcutaneous emphysema. Which one of the following is the most likely causative pathogen?",
+                        img: "",
+                        choices: "Pseudomonase aeruginosa///Streptococcus pyogenes///Clostridium perfringens///Bacillus anthracis///Burkholderia pseudomallei",
+                        answer: "Clostridium perfringens",
+                        select: "",
+                        explain: "Subcutaneous emphysema คือการมีแก๊สอยู่ในชั้นใต้ผิวหนัง คลำได้เสียงกรอบแกรบ (crepitus) ซึ่งเป็นอาการแสดงที่สำคัญของการติดเชื้อแบคทีเรียที่สร้างแก๊สได้ (gas-producing organism) ในแผลเนื้อเยื่ออ่อน (soft tissue infection) เชื้อที่เป็นสาเหตุคลาสสิกของภาวะนี้ (gas gangrene) คือ Clostridium perfringens ซึ่งเป็นแบคทีเรียชนิด anaerobe ที่เจริญได้ดีในสภาวะที่ไม่มีออกซิเจน เช่นในบาดแผลลึก",
+                        state: false
+                    },
+                    {
+                        problem: "23. A 65-years-male presented with severe pain at her face right side. She had experience of painful blistering vesicle at right temporal last week. After treatment, her symptoms had been relieved except pain. What is the most likely diagnosis?",
+                        img: "",
+                        choices: "Primary herpes simplex///Varicella zoster///Post herpetic neuralgia///Herpes keratitis///Herpes zoster",
+                        answer: "Post herpetic neuralgia",
+                        select: "",
+                        explain: "ประวัติการมีผื่นตุ่มน้ำใสที่เจ็บปวดตามแนวเส้นประสาท (dermatomal distribution) ที่บริเวณขมับข้างขวาเมื่อสัปดาห์ก่อน เป็นลักษณะของโรคงูสวัด (Herpes zoster) อาการปวดรุนแรงที่ยังคงอยู่หลังจากที่ผื่นหายไปแล้ว คือภาวะ Postherpetic neuralgia (PHN) ซึ่งเป็นอาการปวดตามแนวเส้นประสาทที่เกิดตามหลังการเป็นงูสวัด",
+                        state: false
+                    },
+                    {
+                        problem: "24. Which one is correct about cancer caused by viral infection?",
+                        img: "",
+                        choices: "Human herpes virus 6 causes Kaposi's sarcoma.///Human papillomavirus causes molluscum contagiosum.///Herpes simplex I causes cervical cancer.///Epstein-Barr virus causes CA nasopharynx.///Poxviridae causes condyloma acuminate.",
+                        answer: "Epstein-Barr virus causes CA nasopharynx.",
+                        select: "",
+                        explain: "ข้อที่ถูกต้องคือ Epstein-Barr virus (EBV หรือ HHV-4) มีความสัมพันธ์อย่างยิ่งกับการเกิดมะเร็งหลังโพรงจมูก (Nasopharyngeal carcinoma - NPC) ข้ออื่นๆผิดดังนี้: Kaposi's sarcoma เกิดจาก HHV-8, Molluscum contagiosum เกิดจาก Poxvirus, มะเร็งปากมดลูก (cervical cancer) เกิดจาก Human papillomavirus (HPV) และ Condyloma acuminata (หูดหงอนไก่) ก็เกิดจาก HPV เช่นกัน",
+                        state: false
+                    },
+                    {
+                        problem: "25. A 7-year-old boy presented with acute fever with coryza, conjunctivitis and productive cough. He had generalized an erythematous maculopapular rash which started on the back of the ears spreading to head neck then covered all the body. What is the most likely diagnosis of this disease?",
+                        img: "",
+                        choices: "Mumps///Roselolar infantum///Measle///Varicella zoster///Rubella",
+                        answer: "Measle",
+                        select: "",
+                        explain: "อาการนำ 3 อย่างที่เรียกว่า '3Cs' (Cough, Coryza, Conjunctivitis) คือ ไอ น้ำมูกไหล และตาแดง ตามมาด้วยผื่นแดงนูน (maculopapular rash) ที่เริ่มจากหลังหู/ไรผม ลามมาที่ใบหน้า ลำคอ และลงมาทั่วตัว (cephalocaudal spread) เป็นลักษณะที่จำเพาะเจาะจงของโรคหัด (Measles หรือ Rubeola)",
+                        state: false
+                    },
+                    {
+                        problem: "26. A 15-year-old boy presented with fever, coryza and multistage skin lesions over all his body. What is the most likely diagnosis of this disease?",
+                        img: "",
+                        choices: "Roselolar infantum///Rubella///Varicella zoster///Herpes zoster///Measle",
+                        answer: "Varicella zoster",
+                        select: "",
+                        explain: "คำสำคัญคือ 'multistage skin lesions' ซึ่งหมายถึงการพบรอยโรคหลายระยะปะปนกันในเวลาเดียวกัน (ตุ่มแดง ตุ่มน้ำใส ตุ่มหนอง และสะเก็ด) เป็นลักษณะที่จำเพาะของโรคอีสุกอีใส (Chickenpox หรือ Varicella) ซึ่งเกิดจากการติดเชื้อ Varicella-zoster virus (VZV) ครั้งแรก",
+                        state: false
+                    },
+                    {
+                        problem: "27. Which of the following conditions is NOT associated with the development of cutaneous horn (cornu cutaneum)?",
+                        img: "",
+                        choices: "Actinic keratosis///Keratoacanthoma///Dysplastic nevus///Verruca vulgaris///Seborrheic keratosis",
+                        answer: "Dysplastic nevus",
+                        select: "",
+                        explain: "Cutaneous horn คือการหนาตัวของชั้นเคราตินจนมีลักษณะคล้ายเขาสัตว์ ซึ่งเป็นลักษณะทางคลินิกที่สามารถเกิดบนรอยโรคได้หลายชนิด ทั้งที่ไม่ร้ายแรง (benign), กึ่งร้ายแรง (pre-malignant) หรือร้ายแรง (malignant) โดยรอยโรคที่เป็นต้นกำเนิดมักเป็นชนิด keratinocytic lesion เช่น Actinic keratosis, Squamous cell carcinoma, Seborrheic keratosis หรือ Verruca vulgaris (หูด) ส่วน Dysplastic nevus เป็นรอยโรคของเซลล์สร้างเม็ดสี (melanocytic lesion) ซึ่งโดยทั่วไปแล้วไม่ได้สร้างเคราตินจนเกิดเป็น horn",
+                        state: false
+                    },
+                    {
+                        problem: "28. Which of the followings is NOT a histological feature of squamous cell carcinoma in-situ (Bowen's disease)?",
+                        img: "",
+                        choices: "Full-thickness epidermal involvement///Surface parakeratosis///Dysplastic keratinocytes///Dermal and subcutaneous invasion///Complete loss of normal maturation",
+                        answer: "Dermal and subcutaneous invasion",
+                        select: "",
+                        explain: "คำว่า 'in-situ' หมายถึง 'ยังอยู่กับที่' ในบริบทของมะเร็งผิวหนัง Squamous cell carcinoma in-situ (SCCIS) หมายความว่าเซลล์มะเร็ง (dysplastic keratinocytes) ยังคงจำกัดอยู่แค่ในชั้นหนังกำพร้า (epidermis) ยังไม่มีการทำลายเยื่อบุฐาน (basement membrane) และลุกลาม (invasion) เข้าไปในชั้นหนังแท้ (dermis) ดังนั้น Dermal invasion จึงเป็นลักษณะของ Invasive SCC ไม่ใช่ SCC in-situ",
+                        state: false
+                    },
+                    {
+                        problem: "29. Which of the following mutations is most commonly identified in melanoma and is utilized for both diagnostic purposes and targeted therapeutic interventions?",
+                        img: "",
+                        choices: "KRAS gene mutation///PTEN gene mutation///TP53 gene mutation///BRAF gene mutation///CDKN2A gene mutation",
+                        answer: "BRAF gene mutation",
+                        select: "",
+                        explain: "การกลายพันธุ์ของยีน BRAF (โดยเฉพาะ BRAF V600E) พบได้ประมาณ 50% ของมะเร็งผิวหนังชนิดเมลาโนมา (cutaneous melanoma) ทำให้เป็น biomarker ที่สำคัญมากในการวินิจฉัยและเป็นเป้าหมายของการรักษาแบบมุ่งเป้า (targeted therapy) โดยใช้ยาในกลุ่ม BRAF inhibitors (เช่น Vemurafenib, Dabrafenib) ซึ่งช่วยยับยั้งการเติบโตของเซลล์มะเร็งที่มีการกลายพันธุ์นี้",
+                        state: false
+                    },
+                    {
+                        problem: "30. Which of the followings is considered the most significant prognostic factor in predicting risk of metastasis and overall survival in melanoma?",
+                        img: "",
+                        choices: "Age at diagnosis///Breslow thickness///Extent of radial growth phase///Number of melanocytic nevi///Size of the primary tumor",
+                        answer: "Breslow thickness",
+                        select: "",
+                        explain: "Breslow thickness คือการวัดความลึกของมะเร็งเมลาโนมาในแนวดิ่ง (หน่วยเป็นมิลลิเมตร) จากชั้นบนสุดของหนังกำพร้า (stratum granulosum) ไปยังจุดที่ลึกที่สุดของเซลล์มะเร็ง เป็นปัจจัยพยากรณ์โรค (prognostic factor) ที่สำคัญที่สุดในการทำนายความเสี่ยงของการแพร่กระจายและอัตรารอดชีวิตโดยรวม ยิ่ง Breslow thickness มาก ความเสี่ยงยิ่งสูง",
+                        state: false
+                    },
+                    {
+                        problem: "31. Which of the followings is the most common skin cancer, which typically occurs in the head and neck region?",
+                        img: "",
+                        choices: "Lymphoma///Basal cell carcinoma///Merkel cell carcinoma///Squamous cell carcinoma///Melanoma",
+                        answer: "Basal cell carcinoma",
+                        select: "",
+                        explain: "Basal cell carcinoma (BCC) เป็นมะเร็งผิวหนังที่พบบ่อยที่สุด และเป็นมะเร็งที่พบบ่อยที่สุดในมนุษย์โดยรวม มักเกิดในบริเวณที่โดนแสงแดดบ่อยๆ เช่น ศีรษะและลำคอ ซึ่งเป็นผลมาจากความสัมพันธ์ที่รุนแรงกับการสัมผัสรังสียูวีเรื้อรัง",
+                        state: false
+                    },
+                    {
+                        problem: "32. A 40-year-old woman developed a 2-cm cyst on her posterior neck for several years, but recently became slightly tender. Excisional biopsy was performed. The histopathology revealed a subepidermal well-defined cyst lined by stratified squamous epithelium with presence of granular layers and containing flaky keratinous materials (without skin appendage). What is the most likely diagnosis?",
+                        img: "",
+                        choices: "Trichilemmal cyst///Epidermoid cyst///Dermatofibroma///Steatocystoma///Dermoid cyst",
+                        answer: "Epidermoid cyst",
+                        select: "",
+                        explain: "ลักษณะทางจุลพยาธิวิทยาที่สำคัญในการวินิจฉัยคือ ผนังของซีสต์ (cyst wall) ที่บุด้วย stratified squamous epithelium และ 'มี' ชั้น granular layer ซึ่งเป็นลักษณะเดียวกับผิวหนังชั้นนอกสุด (epidermis) นี่คือลักษณะจำเพาะของ Epidermoid cyst (หรือ epidermal inclusion cyst) ในขณะที่ Trichilemmal cyst (pilar cyst) ซึ่งพบบ่อยที่หนังศีรษะเช่นกัน จะมีผนังที่ไม่มี granular layer",
+                        state: false
+                    },
+                    {
+                        problem: "33. The histopathologic findings of a skin biopsy specimen revealed infiltrative nests of neoplastic basaloid cells with peripheral nuclear palisading, peritumoral clefts, and marked solar elastosis. What is the most likely diagnosis?",
+                        img: "",
+                        choices: "Squamous cell carcinoma///Basal cell carcinoma///Adenocarcinoma///Malignant melanoma///Sebaceous carcinoma",
+                        answer: "Basal cell carcinoma",
+                        select: "",
+                        explain: "ลักษณะทางจุลพยาธิวิทยาที่กล่าวมาทั้งหมดเป็นลักษณะจำเพาะ (pathognomonic features) ของ Basal cell carcinoma (BCC) ได้แก่ 1) Basaloid cells: เซลล์มะเร็งมีลักษณะคล้ายเซลล์ชั้นฐาน 2) Peripheral palisading: นิวเคลียสของเซลล์ที่ขอบของกลุ่มมะเร็งเรียงตัวกันเป็นแถวคล้ายรั้ว 3) Peritumoral clefts: มีช่องว่างเกิดขึ้นระหว่างกลุ่มเซลล์มะเร็งกับเนื้อเยื่อรอบๆ ซึ่งเป็น artifact จากการเตรียมสไลด์",
+                        state: false
+                    },
+                    {
+                        problem: "34. Which of the followings is the most aggressive and deadly skin cancer?",
+                        img: "",
+                        choices: "Dermatofibrosarcoma///Lymphoma///Melanoma///Squamous cell carcinoma///Basal cell carcinoma",
+                        answer: "Melanoma",
+                        select: "",
+                        explain: "แม้ว่า Melanoma จะพบน้อยกว่า BCC และ SCC แต่เป็นมะเร็งผิวหนังที่อันตรายและดุร้ายที่สุด เนื่องจากมีความสามารถในการแพร่กระจาย (metastasis) ไปยังอวัยวะอื่นได้สูงและรวดเร็ว เช่น ต่อมน้ำเหลือง ปอด ตับ และสมอง หากตรวจพบในระยะที่ลุกลามแล้ว จะมีอัตราการเสียชีวิตสูงที่สุดในกลุ่มมะเร็งผิวหนังด้วยกัน",
+                        state: false
+                    },
+                    {
+                        problem: "35. Which of the followings best describes a severe and acute form of acne that features deep painful nodules and/or cysts, often with ulceration, serum oozing, and crusting, and is frequently accompanied by systemic symptoms such as fever?",
+                        img: "",
+                        choices: "Comedonal acne///Acne conglobata///Acne fulminans///Acne rosacea///Acne vulgaris",
+                        answer: "Acne fulminans",
+                        select: "",
+                        explain: "คำอธิบายนี้คือลักษณะของ Acne fulminans ซึ่งเป็นสิวอักเสบชนิดที่รุนแรงและเฉียบพลันที่สุด มีลักษณะเป็นตุ่มก้อนอักเสบขนาดใหญ่ (nodules/cysts) ที่เจ็บปวดมากและมักแตกเป็นแผล มีน้ำเหลืองซึม และมีอาการทางระบบร่วมด้วย เช่น ไข้ ปวดข้อ ซึ่งแตกต่างจาก Acne conglobata ที่แม้จะรุนแรงเหมือนกันแต่เป็นแบบเรื้อรังและไม่มีอาการทางระบบเฉียบพลัน",
+                        state: false
+                    },
+                    {
+                        problem: "36. Which of the followings is the most significant risk factor in the development of melasma?",
+                        img: "",
+                        choices: "Photosensitizing drugs///Ultraviolet radiation///Familial predisposition///Oral contraceptives///Pregnancy",
+                        answer: "Ultraviolet radiation",
+                        select: "",
+                        explain: "ฝ้า (Melasma) เป็นภาวะที่เซลล์สร้างเม็ดสี (melanocytes) ทำงานมากกว่าปกติ ปัจจัยที่สำคัญที่สุดที่เป็นตัวกระตุ้นและทำให้อาการแย่ลงคือการสัมผัสรังสีอัลตราไวโอเลต (UV radiation) จากแสงแดด แม้ว่าปัจจัยทางฮอร์โมน (เช่น การตั้งครรภ์, ยาคุมกำเนิด) และพันธุกรรมจะมีส่วนสำคัญ แต่แสงแดดถือเป็นปัจจัยเสี่ยงที่สำคัญและควบคุมได้มากที่สุด",
+                        state: false
+                    }
+                ],
+                skin52_formative3: [
+                    {
+                        "problem": "1. A 18-year-old girl developed multiple small asymptomatic flesh-colored papules with central umbilication on pubic area for 1 month. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Sebaceous gland hyperplasia///Comedone///Molluscum contagiosum///Wart///Folliculitis",
+                        "answer": "Molluscum contagiosum",
+                        "select": "",
+                        "explain": "ผู้ป่วยหญิงวัยรุ่นมีตุ่มสีเนื้อขนาดเล็ก ไม่มีอาการ มีรอยบุ๋มตรงกลาง (central umbilication) บริเวณหัวหน่าว ลักษณะดังกล่าวเป็นลักษณะคลาสสิกของโรคหูดข้าวสุก (Molluscum contagiosum) ซึ่งเกิดจากการติดเชื้อไวรัสในกลุ่ม Poxvirus สามารถติดต่อได้ทางการสัมผัส ส่วนตัวเลือกอื่น: a. Sebaceous gland hyperplasia มักพบในผู้สูงอายุบริเวณใบหน้า, b. Comedone คือสิวอุดตัน, d. Wart (หูด) ผิวจะขรุขระกว่า, e. Folliculitis คือรูขุมขนอักเสบ มักเป็นตุ่มแดงหรือตุ่มหนอง",
+                        "state": false
+                    },
+                    {
+                        "problem": "2. A 22-year-old woman presented with multiple painful rashes on lower limbs for 2 weeks. She also complained of joint swelling and pain. The examination revealed several purpuric papules with some hemorrhagic vesicles on her lower extremities. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Panniculitis///Vasculitis syndrome///Septicemic infection///Thrombocytopenic purpura///Stevens-Johnson syndrome",
+                        "answer": "Vasculitis syndrome",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีผื่นลักษณะจำเพาะคือ palpable purpura (ผื่นจ้ำเลือดที่คลำได้เป็นตุ่มนูน) ร่วมกับอาการปวดข้อ (arthralgia) ซึ่งเป็นอาการแสดงสำคัญของกลุ่มโรคหลอดเลือดอักเสบ (Vasculitis syndrome) โดยเฉพาะหลอดเลือดขนาดเล็ก (small-vessel vasculitis) ที่ผิวหนังบริเวณขาส่วนล่าง ส่วนตัวเลือกอื่น: a. Panniculitis คือการอักเสบของไขมันใต้ผิวหนัง, c. Septicemic infection อาจมีผื่นได้แต่ลักษณะหลากหลายและมีไข้สูง, d. Thrombocytopenic purpura ผื่นจะราบ คลำไม่ได้ตุ่ม เกิดจากเกล็ดเลือดต่ำ, e. Stevens-Johnson syndrome เป็นการแพ้ยาอย่างรุนแรง มีแผลที่เยื่อบุต่างๆ",
+                        "state": false
+                    },
+                    {
+                        "problem": "3. A 50-year-old man presented with well-demarcated erythematous plaques with silvery scales distributed along the extensor surfaces of the extremities, trunk, and scalp for 5 years. Which of the following diseases is the patient most likely at risk for?",
+                        "img": "",
+                        "choices": "Metabolic syndrome///Osteoarthritis///Alzheimer'd disease///Chronic Obstructive Pulmonary Disease///Irritable bowel syndrome",
+                        "answer": "Metabolic syndrome",
+                        "select": "",
+                        "explain": "ลักษณะผื่นปื้นแดง ขอบเขตชัด มีขุยสีเงินหนา (well-demarcated erythematous plaques with silvery scales) บริเวณข้อศอก เข่า (extensor surfaces) และหนังศีรษะ เป็นลักษณะคลาสสิกของโรคสะเก็ดเงิน (Psoriasis) ซึ่งเป็นโรคผิวหนังอักเสบเรื้อรังที่สัมพันธ์กับการอักเสบในระบบอื่นของร่างกาย (systemic inflammation) ทำให้ผู้ป่วยมีความเสี่ยงสูงต่อการเกิดโรคร่วม (comorbidities) อื่นๆ โดยเฉพาะกลุ่มอาการเมตาบอลิก (Metabolic syndrome) ซึ่งประกอบด้วยโรคอ้วนลงพุง ความดันโลหิตสูง ไขมันในเลือดผิดปกติ และภาวะดื้อต่ออินซูลิน",
+                        "state": false
+                    },
+                    {
+                        "problem": "4. A 30-year-old woman presented with painful erosions on her lips and genitalia for 2 days. Physical examination also revealed multiple round skin lesions with three concentric color zones on her hands and feet. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Erythema multiforme///Oral lichen planus///Stevens-Johnson Syndrome///Pemphigus vulgaris///Fixed drug eruption",
+                        "answer": "Erythema multiforme",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีแผลที่เยื่อบุ (ริมฝีปาก อวัยวะเพศ) ร่วมกับผื่นที่ผิวหนัง ลักษณะสำคัญคือ 'target lesions' หรือ 'ผื่นเป้า' ซึ่งมีลักษณะเป็นวงสามสีซ้อนกัน (three concentric color zones) บริเวณมือและเท้า เป็นลักษณะจำเพาะของโรค Erythema Multiforme (EM) ซึ่งมักเกิดจากการติดเชื้อ (เช่น Herpes simplex virus) หรือการแพ้ยา ตัวเลือก c. Stevens-Johnson Syndrome (SJS) เป็นภาวะที่รุนแรงกว่า แม้จะอยู่ในกลุ่มโรคเดียวกัน แต่ SJS จะมีแผลที่เยื่อบุรุนแรงและผื่นผิวหนังมักเป็นแบบ atypical target หรือ purpuric macules ที่ลุกลามอย่างรวดเร็ว",
+                        "state": false
+                    },
+                    {
+                        "problem": "5. A construction worker suffers a mild crush injury to his hand. Within 48 hours, the site becomes swollen, red, and warm. Which cell type is most responsible for maintaining and amplifying the local inflammatory response?",
+                        "img": "",
+                        "choices": "Macrophage///Eosinophil///Helper T cell///Smooth muscle cell///Merkel cell",
+                        "answer": "Macrophage",
+                        "select": "",
+                        "explain": "ในกระบวนการอักเสบเฉียบพลัน (acute inflammation) ช่วง 24-48 ชั่วโมงหลังเกิดการบาดเจ็บ เซลล์เม็ดเลือดขาวชนิด Monocyte จะเคลื่อนที่จากหลอดเลือดเข้าสู่เนื้อเยื่อและเปลี่ยนแปลงไปเป็น Macrophage ซึ่ง Macrophage มีบทบาทสำคัญในการเก็บกินสิ่งแปลกปลอมและเซลล์ที่ตายแล้ว (phagocytosis) และที่สำคัญคือการหลั่งสารสื่อกลางการอักเสบ (inflammatory mediators) เช่น cytokines (TNF, IL-1) และ chemokines เพื่อเรียกเซลล์อักเสบอื่นๆ เข้ามาในพื้นที่ ทำให้การอักเสบยังคงดำเนินต่อไปและรุนแรงขึ้น (maintaining and amplifying) ก่อนที่จะเข้าสู่กระบวนการซ่อมแซมเนื้อเยื่อ",
+                        "state": false
+                    },
+                    {
+                        "problem": "6. A 25-year-old woman with a history of acne scars developed dark spots on her cheeks after sun exposure. Which of the following enzymes is most directly involved in this post-inflammatory hyperpigmentation?",
+                        "img": "",
+                        "choices": "Collagenase///Tyrosinase///Amylase///DNA polymerase///Elastase",
+                        "answer": "Tyrosinase",
+                        "select": "",
+                        "explain": "รอยดำหลังการอักเสบ (Post-inflammatory hyperpigmentation - PIH) เกิดจากการที่เซลล์สร้างเม็ดสี (melanocyte) ผลิตเม็ดสีเมลานิน (melanin) มากขึ้นผิดปกติหลังจากการเกิดการอักเสบของผิวหนัง เช่น สิวอักเสบ เอนไซม์หลักที่เป็นตัวควบคุมและเป็นขั้นตอนที่สำคัญที่สุด (rate-limiting step) ในกระบวนการสร้างเมลานิน (melanogenesis) คือเอนไซม์ Tyrosinase ซึ่งทำหน้าที่เปลี่ยนสารตั้งต้น Tyrosine ไปเป็น Melanin แสงแดดเป็นปัจจัยกระตุ้นที่สำคัญที่ทำให้รอยดำเข้มขึ้น",
+                        "state": false
+                    },
+                    {
+                        "problem": "7. A 15-year-old boy presents with red, dry, and painful skin on his back after sunbathing for hours without sunscreen. There is no blistering or weeping. Which skin layer is most likely affected?",
+                        "img": "",
+                        "choices": "Dermis///Reticular dermis///Stratum corneum///Stratum basale///Hypodermis",
+                        "answer": "Stratum corneum",
+                        "select": "",
+                        "explain": "อาการผิวแดง แห้ง และเจ็บปวดโดยไม่มีตุ่มน้ำพอง (no blistering) หลังจากตากแดดเป็นเวลานาน เป็นลักษณะของผิวไหม้แดดระดับที่หนึ่ง (first-degree burn) ซึ่งการบาดเจ็บจะจำกัดอยู่แค่ในชั้นหนังกำพร้า (Epidermis) อาการ 'ผิวแห้ง' (dry skin) เป็นตัวบ่งชี้สำคัญถึงการที่เกราะป้องกันผิว (skin barrier) ซึ่งก็คือชั้น Stratum corneum ถูกทำลาย ทำให้ผิวสูญเสียน้ำมากกว่าปกติ (transepidermal water loss) แม้ว่าเซลล์ในชั้นอื่นของหนังกำพร้าจะได้รับความเสียหายเช่นกัน แต่การทำลายหน้าที่ของ Stratum corneum เป็นคำอธิบายอาการผิวแห้งได้โดยตรงที่สุด",
+                        "state": false
+                    },
+                    {
+                        "problem": "8. A 22-year-old woman presents with a painful, red lump in her axilla. She reports that it started as a small tender spot two days ago and has rapidly enlarged. On examination, there is a 3 cm fluctuant, erythematous mass with surrounding induration. She has a low-grade fever. What is the most likely causative organism?",
+                        "img": "",
+                        "choices": "Candida albicans///Staphylococcus aureus///Klebsiella pneumoniae///Pseudomonas aeruginosa///Streptococcus pyogenes",
+                        "answer": "Staphylococcus aureus",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีก้อนฝี (abscess) ที่รักแร้ ซึ่งมีลักษณะสำคัญคือเป็นก้อนนูนแดง ร้อน เจ็บ มีขนาดใหญ่ขึ้นอย่างรวดเร็ว และคลำได้ลักษณะนิ่มๆ ตรงกลาง (fluctuant) ซึ่งบ่งชี้ว่ามีหนองอยู่ภายใน ร่วมกับมีไข้ต่ำๆ เชื้อก่อโรคที่พบบ่อยที่สุดที่ทำให้เกิดฝีหนองที่ผิวหนัง (skin abscess/furuncle) ในคนทั่วไปคือเชื้อแบคทีเรีย Staphylococcus aureus ส่วน Streptococcus pyogenes มักทำให้เกิดการติดเชื้อที่ลุกลามในชั้นผิวหนังเรียกว่า cellulitis มากกว่าจะเป็นก้อนฝีที่จำกัดขอบเขต",
+                        "state": false
+                    },
+                    {
+                        "problem": "9. A 22-year-old man came to see a doctor with several patches on his face. The doctor scarped his skin around a patch and did KOH preparation. Microscopic result revealed septate hyphae. What is the most appropriate and effective treatment?",
+                        "img": "",
+                        "choices": "Tolnaftate cream///Terbinafine oral///Benzoic acid ointment///Ketoconazole shampoo///Itraconazole cream",
+                        "answer": "Ketoconazole shampoo",
+                        "select": "",
+                        "explain": "ผลตรวจ KOH preparation พบ Septate hyphae ยืนยันการติดเชื้อราในกลุ่ม Dermatophyte (โรคกลาก) บริเวณใบหน้า (Tinea faciei) การรักษามีทั้งยาทาและยารับประทาน ในกรณีที่มีผื่นหลายตำแหน่ง (several patches) การใช้ยาทาอาจไม่สะดวก การใช้ Ketoconazole shampoo เป็นยาล้างหน้าเป็นทางเลือกที่เหมาะสม (appropriate) และมีประสิทธิภาพ (effective) เพื่อควบคุมการติดเชื้อในบริเวณกว้าง หลีกเลี่ยงผลข้างเคียงของยารับประทาน (Terbinafine oral) ซึ่งมักจะเก็บไว้ใช้ในรายที่รุนแรงกว่านี้หรือไม่ตอบสนองต่อยาทา",
+                        "state": false
+                    },
+                    {
+                        "problem": "10. A 34-year-old woman came to the hospital with redness in one eye (see photo) and discomfort when opening her eyes in bright light. She also reported eye pain. The doctor suspected herpes simplex keratitis. What is the most appropriate topical drug and its mechanism of action for treating her condition?",
+                        "img": "https://drive.google.com/open?id=1CxW5X9PW4yVGfDsFclCS0pDBV-kwjg0Z&usp=drive_copy",
+                        "choices": "Valganciclovir: inhibit viral DNA polymerase///Valacyclovir: inhibit viral thymidine kinase///Cidofovir: inhibit viral esterase///Acyclovir: inhibit viral DNA polymerase///Ganciclovir: inhibit viral RNA-dependent DNA polymerase",
+                        "answer": "Acyclovir: inhibit viral DNA polymerase",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการของโรคเริมที่กระจกตา (Herpes simplex keratitis - HSK) ซึ่งยาที่ใช้รักษาคือยาต้านไวรัส (antiviral agents) การรักษามาตรฐานคือการใช้ยาหยอดหรือยาป้ายตาเฉพาะที่ ตัวเลือก d. Acyclovir เป็นยาต้านไวรัสที่ใช้กันแพร่หลาย มีในรูปแบบยาป้ายตา (ophthalmic ointment) สำหรับรักษา HSK โดยตรง กลไกการออกฤทธิ์คือ หลังจากยาถูกเปลี่ยนให้อยู่ในรูปที่ออกฤทธิ์ (activation) โดยเอนไซม์ของไวรัส (viral thymidine kinase) แล้ว จะเข้าไปยับยั้งเอนไซม์ viral DNA polymerase ทำให้ไวรัสไม่สามารถแบ่งตัวเพิ่มจำนวนได้ ส่วนตัวเลือกอื่น: a และ b เป็นยารับประทาน, c ไม่ใช่ยาหลัก, e บอกกลไกของ Ganciclovir ผิด (Ganciclovir ยับยั้ง DNA polymerase ไม่ใช่ RNA-dependent DNA polymerase)",
+                        "state": false
+                    },
+                    {
+                        "problem": "11. Which of the following dermatological conditions is an appropriate indication for the use of 0.1% Triamcinolone cream?",
+                        "img": "",
+                        "choices": "Verruca vulgaris///Tinea corporis///Acne vulgaris///Herpes simplex infection///Psoriasis vulgaris",
+                        "answer": "Psoriasis vulgaris",
+                        "select": "",
+                        "explain": "ยา 0.1% Triamcinolone cream เป็นยาสเตียรอยด์ชนิดทาภายนอกที่มีความแรงปานกลาง (medium-potency topical corticosteroid) ใช้สำหรับลดการอักเสบของผิวหนัง (anti-inflammatory effect) ตัวเลือก e. Psoriasis vulgaris หรือโรคสะเก็ดเงิน เป็นโรคผิวหนังอักเสบเรื้อรังซึ่งเป็นข้อบ่งชี้ที่สำคัญและพบบ่อยที่สุดในการใช้ยาสเตียรอยด์ชนิดทาเพื่อควบคุมการอักเสบและลดขุยของผื่น ส่วนตัวเลือกอื่นเป็นโรคติดเชื้อ (หูด-ไวรัส, กลาก-เชื้อรา, เริม-ไวรัส) ซึ่งการใช้สเตียรอยด์อย่างเดียวจะทำให้โรคแย่ลง หรือสิว (Acne) ซึ่งไม่ใช่ข้อบ่งชี้หลักในการใช้ยาทาสเตียรอยด์",
+                        "state": false
+                    },
+                    {
+                        "problem": "12. A 45-year-old woman with chronic eczema has been applying a 0.05% Clobetasol ointment to her forearms daily for several months. Which of the following adverse effects is most likely to occur at the application site?",
+                        "img": "",
+                        "choices": "Skin atrophy///Hyperhidrosis///Urticaria///Photosensitivity///Lichenification",
+                        "answer": "Skin atrophy",
+                        "select": "",
+                        "explain": "ยา Clobetasol ointment เป็นยาสเตียรอยด์ชนิดทาภายนอกที่มีความแรงสูงที่สุด (super-potent topical corticosteroid) การใช้ยาที่มีความแรงสูงติดต่อกันเป็นเวลานานหลายเดือน (several months) จะทำให้เกิดผลข้างเคียงเฉพาะที่ได้บ่อย ผลข้างเคียงที่สำคัญและพบบ่อยที่สุดคือการฝ่อของผิวหนัง (Skin atrophy) ซึ่งจะทำให้ผิวหนังบางลง, เห็นเส้นเลือดฝอยชัดขึ้น (telangiectasia), เกิดรอยแตก (striae) และช้ำง่าย ส่วน Lichenification คือผิวที่หนาขึ้นจากการเกาเรื้อรัง ซึ่งเป็นลักษณะของตัวโรค ไม่ใช่ผลข้างเคียงจากยา",
+                        "state": false
+                    },
+                    {
+                        "problem": "13. A 70-year-old woman presented with skin lesions on nape of neck and upper back for 4 weeks. What is the most likely finding found from skin scraping?",
+                        "img": "https://drive.google.com/open?id=1MFxq235ZqLM_ddAK-TKS8oiOMAD3FAnV&usp=drive_copy",
+                        "choices": "Pseudohyphae with budding yeasts///Pigmented hyphae///Hyaline septate hyphae with arthrospores///Mites with eggs///Short hyphae with blastospores",
+                        "answer": "Short hyphae with blastospores",
+                        "select": "",
+                        "explain": "จากรูปและตำแหน่งของผื่น (ต้นคอและหลังส่วนบน) ที่เป็นดวงๆ สีจางกว่าผิวปกติ (hypopigmented patches) เป็นลักษณะที่จำเพาะของโรคเกลื้อน (Tinea versicolor หรือ Pityriasis versicolor) ซึ่งเกิดจากเชื้อยีสต์ในกลุ่ม Malassezia spp. เมื่อนำขุยจากผื่นไปตรวจด้วยกล้องจุลทรรศน์โดยใช้ KOH preparation จะพบเชื้อรามีลักษณะจำเพาะที่เรียกว่า 'spaghetti and meatballs' ซึ่งก็คือการพบสายราสั้นๆ (short hyphae) อยู่ร่วมกับเซลล์ยีสต์รูปกลม (blastospores หรือ budding yeasts) ดังนั้นคำตอบคือข้อ e. ส่วนตัวเลือก c. Hyaline septate hyphae จะพบในโรคกลากซึ่งเกิดจากเชื้อ Dermatophytes และตัวเลือก a. Pseudohyphae จะพบในเชื้อ Candida",
+                        "state": false
+                    },
+                    {
+                        "problem": "14. A 40-year-old male presented with itchy bullous lesions right foot for 5 days. What is the most likely pathogenesis of his disease?",
+                        "img": "https://drive.google.com/open?id=1vc9LqDQLEeXlZ7qMvmGTfXszIsXV-bmr&usp=drive_copy",
+                        "choices": "Herpes virus infection///Varicella zoster virus infection///Autoantibody against desmosome///Autoantibody against hemidesmosome///Helminthic infestation",
+                        "answer": "Autoantibody against hemidesmosome",
+                        "select": "",
+                        "explain": "จากรูปจะเห็นตุ่มน้ำพองขนาดใหญ่และเต่งตึง (large, tense bullae) ซึ่งเป็นลักษณะสำคัญของโรค Bullous Pemphigoid ซึ่งเป็นโรคตุ่มน้ำพองจากภูมิคุ้มกันวิปริต (autoimmune blistering disease) ที่พบบ่อยที่สุดในผู้สูงอายุ พยาธิกำเนิดของโรคนี้เกิดจากการที่ร่างกายสร้างแอนติบอดี (autoantibody) ชนิด IgG ต่อโปรตีนที่เป็นส่วนประกอบของ Hemidesmosome (คือ BP180 และ BP230) ซึ่งเป็นโครงสร้างที่ทำหน้าที่ยึดระหว่างชั้นหนังกำพร้า (epidermis) และชั้นหนังแท้ (dermis) การทำลาย Hemidesmosome ทำให้ผิวหนังสองชั้นนี้แยกออกจากกันเกิดเป็นตุ่มน้ำพองชนิด subepidermal split ที่มีลักษณะเต่งตึง ไม่แตกง่าย ส่วนข้อ c. Autoantibody against desmosome เป็นพยาธิกำเนิดของโรค Pemphigus vulgaris ซึ่งตุ่มน้ำจะเหี่ยวและแตกง่ายกว่า",
+                        "state": false
+                    },
+                    {
+                        "problem": "15. A 42-year-old man with a history of sinusitis and chronic cough for 2 months. He was treated with different antibiotics without any improvement. Chest X-ray was performed and showed multiple cavitary lesions. Urinalysis revealed RBC casts. Blood test for C-ANCA was positive. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Granulomatosis with polyangiitis///Polyarteritis nodosa///Microscopic polyangiitis///Eosinophilic granulomatosis with polyangiitis///Systemic lupus erythematosus",
+                        "answer": "Granulomatosis with polyangiitis",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการแสดงครบสามอย่าง (classic triad) ของโรค Granulomatosis with Polyangiitis (GPA) หรือชื่อเดิมคือ Wegener's granulomatosis ซึ่งเป็นโรคในกลุ่ม ANCA-associated vasculitis ได้แก่ 1) การอักเสบของทางเดินหายใจส่วนบนและล่าง (ไซนัสอักเสบ, ไอเรื้อรัง, ภาพรังสีทรวงอกพบโพรง-cavitary lesions) 2) การอักเสบของไต (glomerulonephritis) ตรวจพบเม็ดเลือดแดงในปัสสาวะ (RBC casts) และ 3) ผลเลือดพบ C-ANCA (antineutrophil cytoplasmic antibody) เป็นบวก ซึ่งมีความจำเพาะต่อโรคนี้สูงมาก",
+                        "state": false
+                    },
+                    {
+                        "problem": "16. A middle aged woman presented with generalized flaccid blisters on trunk and both extremities. Oral erosion was seen at both buccal mucosa. Direct immunofluorescence showed deposition of IgG and C3 on the intercellular spaces of keratinocytes. What is the pathogenesis?",
+                        "img": "",
+                        "choices": "Antibody to desmoglein 1 and 3///Antibody to desmocollin///Antibody to transglutaminase///Antibody to BPAg2///Antibody to desmoplakin",
+                        "answer": "Antibody to desmoglein 1 and 3",
+                        "select": "",
+                        "explain": "ลักษณะทางคลินิกคือตุ่มน้ำพองที่เหี่ยวง่าย แตกง่าย (flaccid blisters) และมีแผลในปาก (oral erosion) เป็นลักษณะของโรค Pemphigus Vulgaris (PV) ผลการตรวจทางพยาธิวิทยาด้วยเทคนิค Direct Immunofluorescence (DIF) ที่พบลักษณะ 'chicken-wire' pattern ของ IgG และ C3 ติดอยู่ระหว่างเซลล์ keratinocytes (intercellular spaces) เป็นการยืนยันการวินิจฉัย พยาธิกำเนิดของ PV เกิดจากร่างกายสร้าง autoantibody ต่อโปรตีน Desmoglein ซึ่งเป็นส่วนประกอบของ desmosome ที่ยึดเซลล์ผิวหนังเข้าด้วยกัน โดยใน PV ชนิดที่มีรอยโรคทั้งที่ผิวหนังและเยื่อบุ (mucocutaneous form) จะตรวจพบแอนติบอดีต่อทั้ง Desmoglein 1 (Dsg1) และ Desmoglein 3 (Dsg3)",
+                        "state": false
+                    },
+                    {
+                        "problem": "17. A 40-year-old female presented with blisters and erosions on trunk and both extremities for 1 month. She also had oral ulcers at both buccal mucosa and hard palate. Tzanck's smear showed round homogenous cells containing hyperchromatic nuclei and perinuclear halo. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Pemphigus vulgaris///Bullous pemphigoid///Toxic epidermal necrolysis///Herpes zoster///Herpes simplex infection",
+                        "answer": "Pemphigus vulgaris",
+                        "select": "",
+                        "explain": "การตรวจ Tzanck's smear พบเซลล์ลักษณะเฉพาะคือ Acantholytic cells (หรือ Tzanck cells) ซึ่งเป็นเซลล์ผิวหนัง (keratinocyte) ที่แยกตัวออกจากกัน มีลักษณะกลม นิวเคลียสติดสีเข้ม (hyperchromatic nuclei) และมีขอบใสๆ รอบนิวเคลียส (perinuclear halo) การพบเซลล์ชนิดนี้บ่งชี้ถึงกระบวนการ acantholysis หรือการสลายของ desmosome ที่ยึดระหว่างเซลล์ผิวหนัง ซึ่งเป็นกลไกหลักของโรคในกลุ่ม Pemphigus เมื่อร่วมกับอาการทางคลินิกที่มีตุ่มน้ำพองและแผลถลอกทั้งที่ผิวหนังและในปาก จึงวินิจฉัยได้ว่าเป็น Pemphigus vulgaris ส่วนในโรคเริม (Herpes) จะพบเซลล์ยักษ์หลายนิวเคลียส (multinucleated giant cells)",
+                        "state": false
+                    },
+                    {
+                        "problem": "18. A 45-year-old man presented with tingling, numbness, and transient white and blue discoloration of digits of hands and feet when exposed to cold environment for 2 years. He also had difficulty of swallowing. Physical examination showed thickening and tightness of skin of fingers and toes, and matted telangiectasia on face and upper chest. What is the most useful test for diagnosis?",
+                        "img": "",
+                        "choices": "Complement level///Anti-centromere antibody///Anti-Scl-70 antibody///ANA///Anti-histone antibody",
+                        "answer": "Anti-centromere antibody",
+                        "select": "",
+                        "explain": "กลุ่มอาการของผู้ป่วย ได้แก่ อาการปลายนิ้วซีดเขียวเมื่อโดนความเย็น (Raynaud's phenomenon), กลืนลำบาก (esophageal dysmotility), ผิวหนังที่นิ้วมือแข็งตึง (sclerodactyly) และมีเส้นเลือดฝอยผิดปกติที่ใบหน้า (telangiectasia) เป็นลักษณะที่จำเพาะของกลุ่มอาการ CREST ซึ่งเป็นรูปแบบหนึ่งของโรคหนังแข็งชนิดจำกัด (Limited Cutaneous Systemic Sclerosis - lcSSc) การตรวจทางห้องปฏิบัติการที่จำเพาะและมีประโยชน์ที่สุดในการวินิจฉัยภาวะนี้คือการตรวจหา Anti-centromere antibody (ACA) ซึ่งพบได้ในผู้ป่วย lcSSc ถึง 60-80% ส่วน Anti-Scl-70 antibody มักพบในโรคหนังแข็งชนิดแพร่กระจาย (diffuse form) ซึ่งมีอาการทางผิวหนังที่รุนแรงและรวดเร็วกว่า",
+                        "state": false
+                    },
+                    {
+                        "problem": "19. Which is the topical calcineurin inhibitor that can be used for treatment of Psoriasis skin?",
+                        "img": "",
+                        "choices": "Anthralin///Azathioprine///Tazarotene///Cyclosporine///Tacrolimus",
+                        "answer": "Tacrolimus",
+                        "select": "",
+                        "explain": "ยาในกลุ่ม Calcineurin inhibitors ออกฤทธิ์ยับยั้งการทำงานของ T-cell ทำให้ลดการหลั่งสารอักเสบ (inflammatory cytokines) ยากลุ่มนี้มีทั้งในรูปแบบรับประทานและยาทา ตัวเลือก e. Tacrolimus เป็นยาในกลุ่มนี้ที่มีในรูปแบบยาทา (topical ointment) ซึ่งนิยมนำมาใช้รักษาโรคสะเก็ดเงิน (Psoriasis) ในบริเวณที่ผิวบอบบาง (sensitive areas) เช่น ใบหน้า, ข้อพับ, อวัยวะเพศ เพื่อหลีกเลี่ยงผลข้างเคียงของยาสเตียรอยด์ ส่วน Cyclosporine (d) เป็นยากลุ่มเดียวกันแต่อยู่ในรูปแบบรับประทาน",
+                        "state": false
+                    },
+                    {
+                        "problem": "20. If the doctor prescribes topical retinoids for treatment of Psoriasis skin lesion. What is the most common side effect of this drug that may occur in this patient?",
+                        "img": "",
+                        "choices": "Petechiae///Purpura///Impetigo///Photosensitivity///Acne",
+                        "answer": "Photosensitivity",
+                        "select": "",
+                        "explain": "ยาทาในกลุ่ม Retinoids (เช่น Tazarotene) ที่ใช้รักษาสะเก็ดเงิน ออกฤทธิ์โดยการปรับการแบ่งตัวและพัฒนาของเซลล์ผิวหนังให้เป็นปกติ ผลข้างเคียงที่พบบ่อยที่สุดของยาทากลุ่มนี้คือการระคายเคืองผิวหนังเฉพาะที่ (local irritation) เช่น อาการแดง, แสบ, คัน, และผิวลอก ซึ่งผลข้างเคียงเหล่านี้ทำให้ผิวหนังไวต่อแสงแดดมากขึ้น (Photosensitivity) ดังนั้นผู้ป่วยที่ใช้ยานี้จึงควรหลีกเลี่ยงแสงแดดจัดและใช้ครีมกันแดดเป็นประจำ",
+                        "state": false
+                    },
+                    {
+                        "problem": "21. What is the mechanism of action of topical calcipotriol for treatment of Psoriasis skin?",
+                        "img": "",
+                        "choices": "Increase proliferation of keratinocytes///Increase mitotic activity in epidermis///Increase differentiation of keratinocytes///Reduce onchronosis///Increase skin growth",
+                        "answer": "Increase differentiation of keratinocytes",
+                        "select": "",
+                        "explain": "โรคสะเก็ดเงิน (Psoriasis) มีพยาธิสภาพที่สำคัญคือเซลล์ผิวหนัง (keratinocytes) แบ่งตัวเร็วกว่าปกติ (hyperproliferation) และเจริญพัฒนาไปเป็นเซลล์ที่สมบูรณ์ได้ไม่ดี (abnormal differentiation) ยา Calcipotriol เป็นอนุพันธ์ของวิตามินดี 3 (Vitamin D3 analogue) ซึ่งออกฤทธิ์โดยการจับกับ Vitamin D receptor ที่อยู่บน keratinocytes กลไกหลักคือการยับยั้งการแบ่งตัวที่ผิดปกติของเซลล์ผิวหนัง และที่สำคัญคือการกระตุ้นให้เซลล์ผิวหนังมีการเจริญพัฒนาไปเป็นเซลล์ที่สมบูรณ์ (promote/increase normal keratinocyte differentiation) ทำให้ลักษณะผื่นหนาและขุยลดลง",
+                        "state": false
+                    },
+                    {
+                        "problem": "22. A 25-year-old male comes to the hospital with single skin lesion on his fingers. The doctor's diagnosis is wart. What is the most effective topical drug that can be used for this patient?",
+                        "img": "https://drive.google.com/open?id=1irhic6-usa70PSLQKpzr63OXGFZTn477&usp=drive_copy",
+                        "choices": "Sodium thiosulphate///Crotamiton///Benzyl peroxide///Imiquimod///Trichloroacetic acid",
+                        "answer": "Imiquimod",
+                        "select": "",
+                        "explain": "หูด (Wart หรือ Verruca) เกิดจากการติดเชื้อไวรัส Human Papillomavirus (HPV) การรักษามีหลายวิธี ทั้งการทำลายรอยโรคและการกระตุ้นภูมิคุ้มกัน ตัวเลือก d. Imiquimod เป็นยาทาในกลุ่ม immune response modifier ที่มีประสิทธิภาพสูงในการรักษาหูด โดยออกฤทธิ์กระตุ้นระบบภูมิคุ้มกันเฉพาะที่ (local immune system) ผ่าน Toll-like receptor 7 (TLR7) ให้มาทำลายเซลล์ที่ติดเชื้อไวรัส HPV ซึ่งเป็นการรักษาที่ต้นเหตุและอาจมีอัตราการกลับเป็นซ้ำต่ำกว่าวิธีอื่น ส่วนตัวเลือก e. Trichloroacetic acid (TCA) เป็นกรดที่ใช้จี้ทำลายเนื้อหูดโดยตรง ก็เป็นวิธีที่มีประสิทธิภาพเช่นกัน แต่ Imiquimod ถือเป็นยาที่ทันสมัยและมีกลไกที่จำเพาะ",
+                        "state": false
+                    },
+                    {
+                        "problem": "23. A 25-year-old woman presents to the hospital with melasma. The doctor prescribes a topical anti-melasma cream. Which of the following drugs is non-hydroquinone and acts as a tyrosinase inhibitor?",
+                        "img": "",
+                        "choices": "Anthranilates///Zinc oxide///Urea///Camphor derivatives///Resorcinol",
+                        "answer": "Resorcinol",
+                        "select": "",
+                        "explain": "การรักษาฝ้า (Melasma) มีเป้าหมายเพื่อลดการสร้างเม็ดสีเมลานิน โดยการยับยั้งเอนไซม์ Tyrosinase ซึ่งเป็นเอนไซม์หลักในกระบวนการนี้ Hydroquinone เป็นยามาตรฐานแต่มีผลข้างเคียงได้ โจทย์ต้องการยาที่ไม่ใช่ Hydroquinone แต่ออกฤทธิ์ยับยั้ง Tyrosinase จากตัวเลือกที่ให้มา e. Resorcinol เป็นสารเคมีที่อนุพันธ์ของมัน (Resorcinol derivatives) เช่น 4-n-butylresorcinol ถูกพัฒนาขึ้นมาเป็นสารทำให้ผิวขาว (whitening agent) ที่มีประสิทธิภาพสูง โดยออกฤทธิ์ยับยั้งเอนไซม์ Tyrosinase ได้โดยตรง จึงเป็นคำตอบที่ถูกต้องที่สุดในกลุ่มนี้ ส่วนตัวเลือกอื่นเป็นสารกันแดด (Anthranilates, Zinc oxide) หรือสารให้ความชุ่มชื้น (Urea)",
+                        "state": false
+                    },
+                    {
+                        "problem": "24. A 35-year-old woman presents to the hospital with dry skin and dermatitis. The doctor prescribes a cream to keep the skin hydrated and prevent dryness. Which of the following is a commonly used humectant for the skin?",
+                        "img": "",
+                        "choices": "Kojic acid///Hyaluronic acid///Zinc oxide///Alpha hydroxyl acid///Butter oil",
+                        "answer": "Hyaluronic acid",
+                        "select": "",
+                        "explain": "สารให้ความชุ่มชื้น (moisturizer) แบ่งได้หลายประเภทตามกลไกการออกฤทธิ์ โจทย์ถามถึงสารในกลุ่ม Humectant ซึ่งมีคุณสมบัติดึงดูดน้ำจากอากาศหรือจากชั้นผิวหนังแท้เข้ามาสู่ชั้นหนังกำพร้า ทำให้ผิวชุ่มชื้น ตัวเลือก b. Hyaluronic acid เป็นสาร humectant ที่มีประสิทธิภาพสูงและนิยมใช้กันอย่างแพร่หลาย สามารถอุ้มน้ำได้มากถึง 1000 เท่าของน้ำหนักตัวเอง ส่วนตัวเลือกอื่น: Kojic acid ใช้รักษาฝ้า, Zinc oxide เป็นสารกันแดด, Alpha hydroxyl acid (AHA) ในความเข้มข้นต่ำมีคุณสมบัติเป็น humectant ได้ แต่บทบาทหลักคือการผลัดเซลล์ผิว, และ Butter oil เป็นสารกลุ่ม occlusive/emollient ที่เน้นการเคลือบผิวเพื่อลดการสูญเสียน้ำมากกว่าการดึงดูดน้ำ",
                         "state": false
                     }
                 ],
@@ -7677,7 +8225,7 @@
                     questionSets.push(quizdata[key]);
                 }
             }
-            const checkboxIds = ['skin51fmt1', 'skin51mcq1', 'skin50mcq1', 'skin49mcq1', 'skin48mcq1', 'skin51mcq2', 'skin50mcq2', 'skin49mcq2', 'skin48mcq2', 'skin51mcq3', 'skin50mcq3', 'skin49mcq3', 'skin48mcq3', 'L09-12_Skin_Tumor', 'L13_35_Acne_Melasma', 'L14_15_Skin_injury',
+            const checkboxIds = ['skin52fmt1', 'skin52fmt2', 'skin52fmt3', 'skin51mcq1', 'skin50mcq1', 'skin49mcq1', 'skin48mcq1', 'skin51mcq2', 'skin50mcq2', 'skin49mcq2', 'skin48mcq2', 'skin51mcq3', 'skin50mcq3', 'skin49mcq3', 'skin48mcq3', 'L09-12_Skin_Tumor', 'L13_35_Acne_Melasma', 'L14_15_Skin_injury',
                 'L16-19_Bacterial_skin_disease', 'L20_21_34_Virus_skin_disease', 'L22_34_Fungi_skin_disease',
                 'L23-25_32_33_Arthropod_skin_disease', 'L26_Parasite_skin_disease', 'L8_27-29_Dermal_inflammation',
                 'L30_31_Common_surgical_skin_condition', 'L32_33_Topical_drug', 'L36_Topical_steroid'
