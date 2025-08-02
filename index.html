@@ -3828,10 +3828,10 @@
                         state: false
                     },
                     {
-                        problem: "16. A 53 man present with 1.2x1 cm hyperpigmentation at cheek Biopsy reveals malignant melanocytes invasive dermis and subcutaneous? Which of the following that prognosis factor of the disease",
+                        problem: "16. A 53 man present with 1.2x1 cm hyperpigmentation at cheek Biopsy reveals malignant melanocytes invasive dermis and subcutaneous? Which of the following that prognosis factor of the disease. Which of the following that prognosis factor of the disease?",
                         img: "",
-                        choices: "A. Which of the following that prognosis factor of the disease///B. The depth of vertical thickness of the lesion///C. The duration of size change of the lesion///D. The horizontal diameter of the lesion///E. The location of the lesion///F. The age of the patients",
-                        answer: "B. The depth of vertical thickness of the lesion",
+                        choices: "A. The depth of vertical thickness of the lesion///B. The duration of size change of the lesion///C. The horizontal diameter of the lesion///D. The location of the lesion///E. The age of the patients",
+                        answer: "A. The depth of vertical thickness of the lesion",
                         select: "",
                         explain: "ในกรณีของ Malignant melanoma สิ่งที่สำคัญที่สุดในการทำนายพยากรณ์โรคคือความลึกของการรุกรานของเซลล์มะเร็ง (The depth of vertical thickness of the lesion) หรือ Breslow thickness ซึ่งเป็นปัจจัยหลักในการประเมินระยะของโรค [General knowledge of melanoma prognosis]",
                         state: false
@@ -5332,12 +5332,13 @@
                         "explain": "ลักษณะทางคลินิกและทางจุลพยาธิวิทยาของ tan plaque ที่มี epidermal hyperplasia, horn cyst (หรือ keratin cyst) และ pseudohorn cyst ร่วมกับ hyperkeratosis เป็นลักษณะเฉพาะของ Seborrheic keratosis [General knowledge of skin pathology]"
                     },
                     {
-                        "problem": "16. A 53 man present with 1.2x1 cm hyperpigmentation at cheek Biopsy reveals malignant melanocytes invasive dermis and subcutaneous? Which of the following that prognosis factor of the disease",
-                        "img": "",
-                        "choices": "A. Which of the following that prognosis factor of the disease///B. The depth of vertical thickness of the lesion///C. The duration of size change of the lesion///D. The horizontal diameter of the lesion///E. The location of the lesion///F. The age of the patients",
-                        "answer": "B. The depth of vertical thickness of the lesion",
-                        "select": "",
-                        "explain": "ในกรณีของ Malignant melanoma สิ่งที่สำคัญที่สุดในการทำนายพยากรณ์โรคคือความลึกของการรุกรานของเซลล์มะเร็ง (The depth of vertical thickness of the lesion) หรือ Breslow thickness ซึ่งเป็นปัจจัยหลักในการประเมินระยะของโรค [General knowledge of melanoma prognosis]"
+                        problem: "16. A 53 man present with 1.2x1 cm hyperpigmentation at cheek Biopsy reveals malignant melanocytes invasive dermis and subcutaneous? Which of the following that prognosis factor of the disease. Which of the following that prognosis factor of the disease?",
+                        img: "",
+                        choices: "A. The depth of vertical thickness of the lesion///B. The duration of size change of the lesion///C. The horizontal diameter of the lesion///D. The location of the lesion///E. The age of the patients",
+                        answer: "A. The depth of vertical thickness of the lesion",
+                        select: "",
+                        explain: "ในกรณีของ Malignant melanoma สิ่งที่สำคัญที่สุดในการทำนายพยากรณ์โรคคือความลึกของการรุกรานของเซลล์มะเร็ง (The depth of vertical thickness of the lesion) หรือ Breslow thickness ซึ่งเป็นปัจจัยหลักในการประเมินระยะของโรค [General knowledge of melanoma prognosis]",
+                        state: false
                     },
                     {
                         "problem": "18. A 60 years old man has sudden onset of multiple coin-like lesion brown tan plaques of various sizes 0.5-1 cm on his abdomen. What is the cause of this underlying condition?",
@@ -8490,11 +8491,30 @@
                     return;
                 }
 
-                const searchResults = allQuestions.filter(q => {
+                let searchResults = allQuestions.filter(q => {
                     const inProblem = q.problem?.toLowerCase().includes(searchTerm) || false;
                     const inChoices = q.choices?.toLowerCase().includes(searchTerm) || false;
                     const inExplain = q.explain?.toLowerCase().includes(searchTerm) || false;
                     return inProblem || inChoices || inExplain;
+                });
+
+                // Remove duplicate questions
+                const uniqueQuestions = [];
+                const questionTexts = new Set();
+                searchResults = searchResults.filter(q => {
+                    const problemText = q.problem ? q.problem.replace(/^\d+\.\s*/, '') : '';
+                    const choicesText = q.choices ? q.choices.replace(/^[A-E]\.\s*/gm, '') : '';
+                    if (questionTexts.has(problemText + choicesText)) {
+                        return false;
+                    } else {
+                        questionTexts.add(problemText + choicesText);
+                        return true;
+                    }
+                }).map(q => {
+                    // Sort choices alphabetically
+                    const choicesArray = q.choices.split('///').sort();
+                    q.choices = choicesArray.join('///');
+                    return q;
                 });
 
                 if (searchResults.length === 0) {
