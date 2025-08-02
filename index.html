@@ -372,6 +372,32 @@
     }
 
     /* --- Results Table --- */
+    #submission-filter {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        border-radius: var(--border-radius);
+        border: 1px solid #dee2e6;
+        appearance: none; /* Remove default arrow */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        padding-right: 2rem;
+        cursor: pointer;
+    }
+
+    #submission-filter option {
+        font-size: 1.2rem;
+        cursor: pointer;
+        background-color: var(--color-surface);
+        color: var(--color-text);
+    }
+
+    #submission-filter:hover {
+        background-color: var(--color-light-hover);
+    }
     table {
         width: 100%;
         border-collapse: collapse;
@@ -580,16 +606,21 @@
         </main>
 
         <!-- Results Table -->
+        <select id="submission-filter">
+            <option value="all">All Submissions</option>
+            <option value="correct">Correct Answers</option>
+            <option value="incorrect">Incorrect Answers</option>
+        </select>
         <table>
             <thead>
-                <tr>
-                    <th>Question</th>
-                    <th>Correct Answer</th>
-                    <th>Your Answer</th>
-                    <th>Explanation</th>
-                </tr>
+            <tr>
+                <th>Question</th>
+                <th>Correct Answer</th>
+                <th>Your Answer</th>
+                <th>Explanation</th>
+            </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
                 <!-- Submission results will be populated here -->
             </tbody>
         </table>
@@ -2315,13 +2346,13 @@
                         state: false,
                     },
                     {
-                        problem: `73. ไป hiking Firm painless nodule แล้วใหญ่ขึ้นเรื่อยๆ พบ firm nodule central puncture and erythematous border What is the cause of this granulomatous lesion?`,
-                        img: ``,
-                        choices: `ปาก tick ที่ติดอยู่///Spider bite///Insect bite///Foreign body reaction///Bacterial infection`,
-                        answer: `ปาก tick ที่ติดอยู่`,
-                        select: ``,
-                        explain: `จากประวัติไป hiking และพบ firm painless nodule ที่มี central puncture และ erythematous border ซึ่งใหญ่ขึ้นเรื่อยๆ เป็นลักษณะเฉพาะของ Tick bite granuloma หรือ Borrelial lymphocytoma ซึ่งเกิดจากปฏิกิริยาต่อส่วนปากของเห็บ (tick) ที่ฝังอยู่ในผิวหนัง หรือเป็นปฏิกิริยาต่อเชื้อ Borrelia burgdorferi ที่เห็บนำพามาครับ`,
-                        state: false,
+                        "problem": "73. ไป hiking Firm painless nodule แล้วใหญ่ขึ้นเรื่อยๆ พบ firm nodule central puncture and erythematous border What is the cause of this granulomatous lesion?",
+                        "img": "",
+                        "choices": "Spider bite///Insect bite///Foreign body reaction///Bacterial infection///Tick bite",
+                        "answer": "Tick bite",
+                        "select": "",
+                        "explain": "จากประวัติไป hiking และพบ firm painless nodule ที่มี central puncture และ erythematous border ซึ่งใหญ่ขึ้นเรื่อยๆ เป็นลักษณะเฉพาะของ Tick bite granuloma หรือ Borrelial lymphocytoma ซึ่งเกิดจากปฏิกิริยาต่อส่วนปากของเห็บ (tick) ที่ฝังอยู่ในผิวหนัง หรือเป็นปฏิกิริยาต่อเชื้อ Borrelia burgdorferi ที่เห็บนำพามาครับ",
+                        "state": false
                     },
                     {
                         problem: `74. A 75 years old male patient who recently has a liver transplant presents with widespread crusted lesions. He has a history of chronic immunosuppression therapy and nocturnal pruritus. PE: hyperkeratotic plaques with fissures and area of erythema. Dx?`,
@@ -2335,11 +2366,11 @@
                     {
                         problem: `75. Facial skin problem ที่บริเวณ nose&cheek เป็น rosacea like lesion diagnose เป็นอะไร`,
                         img: ``,
-                        choices: `Acne vulgaris///Perioral dermatitis///Rosacea///Seborrheic dermatitis///Systemic lupus erythematosus`,
-                        answer: `Rosacea`,
+                        choices: `Demodicosis///Seborrheic dermatitis///Lupus erythematosus///Acne vulgaris`,
+                        answer: `Demodicosis`,
                         select: ``,
-                        explain: `Rosacea เป็นโรคผิวหนังเรื้อรังที่ทำให้เกิดรอยแดง (erythema) และตุ่มคล้ายสิว (papules and pustules) บนใบหน้า โดยเฉพาะบริเวณจมูกและแก้ม มักมีการขยายตัวของหลอดเลือดฝอย (telangiectasias) และอาจมีอาการแสบร้อนหรือคันร่วมด้วย การวินิจฉัยจึงตรงกับลักษณะ "rosacea like lesion" ครับ`,
                         state: false,
+                        explain: `Demodicosis หรือ Demodex folliculorum เป็นภาวะที่เกิดจากการติดเชื้อไรขน (mite) ที่ผิวหนัง โดยเฉพาะบริเวณใบหน้า เช่น จมูกและแก้ม ซึ่งอาจทำให้เกิดผื่นแดงคล้ายโรค Rosacea ได้ การวินิจฉัยนี้เหมาะสมกับอาการที่กล่าวถึงครับ`,
                     },
                     {
                         problem: `76. คนไข้มาหาหมอด้วย fever and fatigue. Physical examination shows eschar at leg. History : ทำสวนในวันหยุดสุดสัปดาห์เมื่อ 2 สัปดาห์ที่แล้ว. What is diagnosis.`,
@@ -3290,12 +3321,12 @@
                         explain: "อาการชาที่มือเมื่อสัมผัสความเย็น (numbness of hands when it's cold) นิ้วมือซีด (pallor) ยกเว้นนิ้วหัวแม่มือ และกลับมาแดงเมื่ออุ่นขึ้น (red again when warm) ภายใน 30 นาที เป็นลักษณะจำเพาะของ Raynaud's phenomenon ซึ่งเกิดจากการหดเกร็งของหลอดเลือด (vasospasm) ในหลอดเลือดแดงเล็กๆ ที่ไปยังนิ้วมือและนิ้วเท้า. [9]"
                     },
                     {
-                        problem: "32. A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
-                        img: "",
-                        choices: "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
-                        answer: "Skin biopsy of IgA",
-                        select: "",
-                        explain: "อาการปวดท้องแบบปวดบิด (colicky pain), ผื่น palpable purpura, และอาการทางไตที่พบ RBC และ RBC cast ในปัสสาวะในเด็ก เป็นลักษณะที่เข้าได้กับ Henoch-Schönlein Purpura (IgA vasculitis) การตรวจวินิจฉัยที่เหมาะสมที่สุดคือ การตัดชิ้นเนื้อผิวหนัง (skin biopsy) เพื่อดูการสะสมของ IgA ในผนังหลอดเลือด (dermal vessels) ซึ่งเป็นลักษณะจำเพาะของโรคนี้. [10]"
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
+                        "img": "",
+                        "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
+                        "answer": "Skin biopsy of IgA",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
                     },
                     {
                         problem: "33. A 42-year-old man with sinusitis and a chronic cough for 2 months was treated with antibiotics but did not improve. X-rays show multiple cavity lesions, urinalysis reveals RBC casts, and C-ANCA is positive. What is the diagnosis?",
@@ -3385,14 +3416,14 @@
                         select: "",
                         explain: "ผมร่วงเฉพาะที่หลายตำแหน่ง (multiple localized alopecia) ร่วมกับมีแผลเป็นสีขาวฝ่อ (white atrophic scar), การเปลี่ยนแปลงของเม็ดสี (pigmentary changes) และ telangiectasia (เส้นเลือดฝอยขยายตัว) เป็นลักษณะจำเพาะของผมร่วงแบบมีแผลเป็น (scarring alopecia) โดยเฉพาะ Discoid Lupus Erythematosus (DLE) ซึ่งเป็นรูปแบบหนึ่งของโรค Systemic Lupus Erythematosus (SLE) ที่ส่วนใหญ่จำกัดอยู่เฉพาะผิวหนัง แต่ผู้ป่วยบางรายอาจมีอาการทางระบบอื่นๆ ร่วมด้วย เช่น อาการปวดข้อหรือข้ออักเสบ (arthritis) แม้ว่า Exclamation mark hair จะเป็นลักษณะจำเพาะของ Alopecia areata ซึ่งเป็นผมร่วงแบบไม่มีแผลเป็น แต่ในกรณีที่ DLE เป็นส่วนหนึ่งของ SLE อาจมีอาการ arthritis ร่วมด้วย. [13]"
                     },
-                    {
-                        problem: "44. A 35-year-old patient develops skin lesions on trunk for 1 week as figure. The patient has been treated with topical ketoconazole but the lesions are not improved. Which sentence is correct?",
-                        img: "image_of_skin_lesion_on_trunk.jpg",
-                        choices: "Drug may be a cause///The patient may develop nail change///Systemic antiviral agent may initially preferred///The disease may not be cured by natural history///Systemic antifungal agent should be added",
-                        answer: "Drug may be a cause",
-                        select: "",
-                        explain: "จากสถานการณ์ที่ผู้ป่วยมีรอยโรคที่ลำตัวมา 1 สัปดาห์ และไม่ดีขึ้นหลังจากใช้ยา ketoconazole (ซึ่งเป็นยาต้านเชื้อรา) แสดงว่ารอยโรคอาจไม่ใช่การติดเชื้อรา หรือเป็นเชื้อราที่ดื้อยา หากไม่มีภาพประกอบ ลักษณะของผื่นผิวหนังหลายชนิด เช่น drug eruption หรือ pityriasis rosea (ซึ่งมักจะหายได้เองตามธรรมชาติ) อาจมีสาเหตุมาจากยาที่ใช้ หรืออาจเป็นผื่นที่ไม่ใช่การติดเชื้อรา ดังนั้น 'Drug may be a cause' จึงเป็นข้อที่ถูกต้องและเป็นไปได้มากที่สุดในกรณีที่ยาต้านเชื้อราไม่ได้ผล. [14]"
-                    },
+                    //{
+                    //"problem": "44. A 35-year-old patient develops skin lesions on trunk for 1 week as figure. The patient has been treated with topical ketoconazole but the lesions are not improved. Which sentence is correct?",
+                    //"img": "",
+                    //"choices": "Drug may be a cause///The patient may develop nail change///Systemic antiviral agent may initially preferred///The disease may not be cured by natural history///Systemic antifungal agent should be added",
+                    //"answer": "Drug may be a cause",
+                    //  "select": "",
+                    //    "explain": "จากสถานการณ์ที่ผู้ป่วยมีรอยโรคที่ลำตัวมา 1 สัปดาห์ และไม่ดีขึ้นหลังจากใช้ยา ketoconazole (ซึ่งเป็นยาต้านเชื้อรา) แสดงว่ารอยโรคอาจไม่ใช่การติดเชื้อรา หรือเป็นเชื้อราที่ดื้อยา หากไม่มีภาพประกอบ ลักษณะของผื่นผิวหนังหลายชนิด เช่น drug eruption หรือ pityriasis rosea (ซึ่งมักจะหายได้เองตามธรรมชาติ) อาจมีสาเหตุมาจากยาที่ใช้ หรืออาจเป็นผื่นที่ไม่ใช่การติดเชื้อรา ดังนั้น 'Drug may be a cause' จึงเป็นข้อที่ถูกต้องและเป็นไปได้มากที่สุดในกรณีที่ยาต้านเชื้อราไม่ได้ผล. [14]"
+                    //},
                     {
                         problem: "45. A 35-year-old male patient came with pain, swelling on his left thigh. The... is red, warm, and tender to touch. On examination, it shows fluctuant mass with 5 cm. He was having fever and chill for the past 2 days. What is the causative organism?",
                         img: "",
@@ -3913,13 +3944,12 @@
                         state: false
                     },
                     {
-                        problem: "45. A 15 year-old boy presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation ?",
-                        img: "",
-                        choices: "A. Film///B. Skin biopsy of IgA///C. Throat swab culture///D. ANA///E. ESR",
-                        answer: "B. Skin biopsy of IgA",
-                        select: "",
-                        explain: "อาการปวดท้องโคลิค ผื่น palpable purpura และอาการทางไต (RBC ในปัสสาวะและ RBC cast) ในเด็กผู้ชายอายุ 15 ปี บ่งชี้ถึง Henoch-Schönlein Purpura (HSP) ซึ่งเป็น vasculitis ที่เกิดจากการสะสมของ IgA immune complexes การทำ Skin biopsy เพื่อตรวจหาการสะสมของ IgA เป็นการตรวจที่ยืนยันการวินิจฉัย [General knowledge of Henoch-Schönlein Purpura]",
-                        state: false
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
+                        "img": "",
+                        "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
+                        "answer": "Skin biopsy of IgA",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
                     },
                     {
                         problem: "47. A middle age woman presented with flaccid blister on trunk and both arm. Oral erosion was seen on buccal mucosa. What is the pathogenesis?",
@@ -7234,8 +7264,8 @@
                     {
                         "problem": "73. ไป hiking Firm painless nodule แล้วใหญ่ขึ้นเรื่อยๆ พบ firm nodule central puncture and erythematous border What is the cause of this granulomatous lesion?",
                         "img": "",
-                        "choices": "ปาก tick ที่ติดอยู่///Spider bite///Insect bite///Foreign body reaction///Bacterial infection",
-                        "answer": "ปาก tick ที่ติดอยู่",
+                        "choices": "Spider bite///Insect bite///Foreign body reaction///Bacterial infection///Tick bite",
+                        "answer": "Tick bite",
                         "select": "",
                         "explain": "จากประวัติไป hiking และพบ firm painless nodule ที่มี central puncture และ erythematous border ซึ่งใหญ่ขึ้นเรื่อยๆ เป็นลักษณะเฉพาะของ Tick bite granuloma หรือ Borrelial lymphocytoma ซึ่งเกิดจากปฏิกิริยาต่อส่วนปากของเห็บ (tick) ที่ฝังอยู่ในผิวหนัง หรือเป็นปฏิกิริยาต่อเชื้อ Borrelia burgdorferi ที่เห็บนำพามาครับ",
                         "state": false
@@ -7504,12 +7534,12 @@
                         "explain": "อาการชาที่มือเมื่อสัมผัสความเย็น (numbness of hands when it's cold) นิ้วมือซีด (pallor) ยกเว้นนิ้วหัวแม่มือ และกลับมาแดงเมื่ออุ่นขึ้น (red again when warm) ภายใน 30 นาที เป็นลักษณะจำเพาะของ Raynaud's phenomenon ซึ่งเกิดจากการหดเกร็งของหลอดเลือด (vasospasm) ในหลอดเลือดแดงเล็กๆ ที่ไปยังนิ้วมือและนิ้วเท้า. [9]"
                     },
                     {
-                        "problem": "32. A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
                         "img": "",
                         "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
                         "answer": "Skin biopsy of IgA",
                         "select": "",
-                        "explain": "อาการปวดท้องแบบปวดบิด (colicky pain), ผื่น palpable purpura, และอาการทางไตที่พบ RBC และ RBC cast ในปัสสาวะในเด็ก เป็นลักษณะที่เข้าได้กับ Henoch-Schönlein Purpura (IgA vasculitis) การตรวจวินิจฉัยที่เหมาะสมที่สุดคือ การตัดชิ้นเนื้อผิวหนัง (skin biopsy) เพื่อดูการสะสมของ IgA ในผนังหลอดเลือด (dermal vessels) ซึ่งเป็นลักษณะจำเพาะของโรคนี้. [10]"
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
                     },
                     {
                         "problem": "33. A 42-year-old man with sinusitis and a chronic cough for 2 months was treated with antibiotics but did not improve. X-rays show multiple cavity lesions, urinalysis reveals RBC casts, and C-ANCA is positive. What is the diagnosis?",
@@ -7551,14 +7581,14 @@
                         "select": "",
                         "explain": "ผมร่วงเฉพาะที่หลายตำแหน่ง (multiple localized alopecia) ร่วมกับมีแผลเป็นสีขาวฝ่อ (white atrophic scar), การเปลี่ยนแปลงของเม็ดสี (pigmentary changes) และ telangiectasia (เส้นเลือดฝอยขยายตัว) เป็นลักษณะจำเพาะของผมร่วงแบบมีแผลเป็น (scarring alopecia) โดยเฉพาะ Discoid Lupus Erythematosus (DLE) ซึ่งเป็นรูปแบบหนึ่งของโรค Systemic Lupus Erythematosus (SLE) ที่ส่วนใหญ่จำกัดอยู่เฉพาะผิวหนัง แต่ผู้ป่วยบางรายอาจมีอาการทางระบบอื่นๆ ร่วมด้วย เช่น อาการปวดข้อหรือข้ออักเสบ (arthritis) แม้ว่า Exclamation mark hair จะเป็นลักษณะจำเพาะของ Alopecia areata ซึ่งเป็นผมร่วงแบบไม่มีแผลเป็น แต่ในกรณีที่ DLE เป็นส่วนหนึ่งของ SLE อาจมีอาการ arthritis ร่วมด้วย. [13]"
                     },
-                    {
-                        "problem": "44. A 35-year-old patient develops skin lesions on trunk for 1 week as figure. The patient has been treated with topical ketoconazole but the lesions are not improved. Which sentence is correct?",
-                        "img": "image_of_skin_lesion_on_trunk.jpg",
-                        "choices": "Drug may be a cause///The patient may develop nail change///Systemic antiviral agent may initially preferred///The disease may not be cured by natural history///Systemic antifungal agent should be added",
-                        "answer": "Drug may be a cause",
-                        "select": "",
-                        "explain": "จากสถานการณ์ที่ผู้ป่วยมีรอยโรคที่ลำตัวมา 1 สัปดาห์ และไม่ดีขึ้นหลังจากใช้ยา ketoconazole (ซึ่งเป็นยาต้านเชื้อรา) แสดงว่ารอยโรคอาจไม่ใช่การติดเชื้อรา หรือเป็นเชื้อราที่ดื้อยา หากไม่มีภาพประกอบ ลักษณะของผื่นผิวหนังหลายชนิด เช่น drug eruption หรือ pityriasis rosea (ซึ่งมักจะหายได้เองตามธรรมชาติ) อาจมีสาเหตุมาจากยาที่ใช้ หรืออาจเป็นผื่นที่ไม่ใช่การติดเชื้อรา ดังนั้น 'Drug may be a cause' จึงเป็นข้อที่ถูกต้องและเป็นไปได้มากที่สุดในกรณีที่ยาต้านเชื้อราไม่ได้ผล. [14]"
-                    },
+                    //{
+                    //"problem": "44. A 35-year-old patient develops skin lesions on trunk for 1 week as figure. The patient has been treated with topical ketoconazole but the lesions are not improved. Which sentence is correct?",
+                    //"img": "",
+                    //"choices": "Drug may be a cause///The patient may develop nail change///Systemic antiviral agent may initially preferred///The disease may not be cured by natural history///Systemic antifungal agent should be added",
+                    //"answer": "Drug may be a cause",
+                    //  "select": "",
+                    //    "explain": "จากสถานการณ์ที่ผู้ป่วยมีรอยโรคที่ลำตัวมา 1 สัปดาห์ และไม่ดีขึ้นหลังจากใช้ยา ketoconazole (ซึ่งเป็นยาต้านเชื้อรา) แสดงว่ารอยโรคอาจไม่ใช่การติดเชื้อรา หรือเป็นเชื้อราที่ดื้อยา หากไม่มีภาพประกอบ ลักษณะของผื่นผิวหนังหลายชนิด เช่น drug eruption หรือ pityriasis rosea (ซึ่งมักจะหายได้เองตามธรรมชาติ) อาจมีสาเหตุมาจากยาที่ใช้ หรืออาจเป็นผื่นที่ไม่ใช่การติดเชื้อรา ดังนั้น 'Drug may be a cause' จึงเป็นข้อที่ถูกต้องและเป็นไปได้มากที่สุดในกรณีที่ยาต้านเชื้อราไม่ได้ผล. [14]"
+                    //},
                     {
                         "problem": "36. Patient comes with swelling of the upper lip for 1 day. He was diagnosed with hypertension and was given drug for treatment. What is the main pathogenesis?",
                         "img": "",
@@ -7605,13 +7635,12 @@
                         "state": false
                     },
                     {
-                        "problem": "45. A 15 year-old boy presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation ?",
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
                         "img": "",
-                        "choices": "A. Film///B. Skin biopsy of IgA///C. Throat swab culture///D. ANA///E. ESR",
-                        "answer": "B. Skin biopsy of IgA",
+                        "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
+                        "answer": "Skin biopsy of IgA",
                         "select": "",
-                        "explain": "อาการปวดท้องโคลิค ผื่น palpable purpura และอาการทางไต (RBC ในปัสสาวะและ RBC cast) ในเด็กผู้ชายอายุ 15 ปี บ่งชี้ถึง Henoch-Schönlein Purpura (HSP) ซึ่งเป็น vasculitis ที่เกิดจากการสะสมของ IgA immune complexes การทำ Skin biopsy เพื่อตรวจหาการสะสมของ IgA เป็นการตรวจที่ยืนยันการวินิจฉัย [General knowledge of Henoch-Schönlein Purpura]",
-                        "state": false
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
                     },
                     {
                         "problem": "49. 60 years old female come with annual, polycyclic and papulosquamous for 1 month She had diagnosed for hypertension and received calcium channel inhibitors for 1 year What is laboratory test for the diagnosis",
@@ -8371,24 +8400,38 @@
                 }
             };
 
-            const showSubmission = () => {
+            const showSubmission = (filter = 'all') => {
                 let rowsHtml = '';
-                currentQuestions.slice().reverse().forEach(q => {
-                    if (q.state) {
-                        const selectStyle = q.select === q.answer ? 'color: green;' : 'color: red;';
-                        const selectText = `<span style="${selectStyle}">${q.select}</span>`;
+                const filteredQuestions = currentQuestions.slice().reverse().filter(q => {
+                    if (!q.state) return false; // Only show answered questions
 
-                        rowsHtml += `
-                            <tr>
-                                <td>${q.problem}</td>
-                                <td>${q.answer}</td>
-                                <td>${q.select ? selectText : 'N/A'}</td>
-                                <td><pre style="white-space: pre-wrap; font-family: var(--font-primary);">${q.explain || 'No explanation'}</pre></td>
-                            </tr>`;
+                    if (filter === 'correct') {
+                        return q.select === q.answer;
+                    } else if (filter === 'incorrect') {
+                        return q.select !== q.answer;
                     }
+                    return true; // 'all' or any other case
+                });
+
+                filteredQuestions.forEach(q => {
+                    const selectStyle = q.select === q.answer ? 'color: green;' : 'color: red;';
+                    const selectText = `<span style="${selectStyle}">${q.select}</span>`;
+
+                    rowsHtml += `
+                        <tr>
+                            <td>${q.problem}</td>
+                            <td>${q.answer}</td>
+                            <td>${q.select ? selectText : 'N/A'}</td>
+                            <td><pre style="white-space: pre-wrap; font-family: var(--font-primary);">${q.explain || 'No explanation'}</pre></td>
+                        </tr>`;
                 });
                 $tableBody.html(rowsHtml);
             };
+
+            // Add dropdown HTML
+            $('#submission-filter').on('change', function () {
+                showSubmission(this.value);
+            });
 
             // --- UTILITY FUNCTIONS ---
             const transformUrl = (url) => {
