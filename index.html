@@ -417,6 +417,40 @@
         color: white;
     }
 
+    #search-section {
+        width: 95%;
+        max-width: 900px;
+        padding: 2rem;
+        margin-top: 2rem;
+        border: 1px solid #dee2e6;
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #search-section h2 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    #search-input {
+        width: 100%;
+        max-width: 600px;
+        padding: 0.75rem;
+        font-size: 1.2rem;
+        font-family: var(--font-primary);
+        font-weight: 700;
+        border-radius: var(--border-radius);
+        border: 1px solid #ced4da;
+    }
+
+    #search-results-container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
     /* --- Utility & Helper Classes --- */
     .small-text {
         font-size: 1.3rem;
@@ -445,6 +479,9 @@
         }
 
         #quiz-container {
+            padding: 1rem;
+        }
+        #quiz-container, #search-section {
             padding: 1rem;
         }
 
@@ -624,6 +661,15 @@
                 <!-- Submission results will be populated here -->
             </tbody>
         </table>
+        <!-- Search Section -->
+        <section id="search-section">
+            <h2>ค้นหาจากโจทย์ทั้งหมด</h2>
+            <input type="text" id="search-input" placeholder="พิมพ์คำค้นหาในโจทย์, ตัวเลือก, หรือคำอธิบาย...">
+            <button id="search-btn" class="quiz-button btn-dark">ค้นหา</button>
+            <div id="search-results-container">
+                <!-- Search results will be displayed here as a table -->
+            </div>
+        </section>
     </div>
 
     <script>
@@ -8250,6 +8296,9 @@
             const $reportText = $('#report_text');
             const $toggleRandomBtn = $('#toggle-random-btn');
             const $tableBody = $('table tbody');
+            const $searchInput = $('#search-input');
+            const $searchBtn = $('#search-btn');
+            const $searchResultsContainer = $('#search-results-container');
 
             // --- STATE VARIABLES ---
             let current_question = {};
@@ -8433,6 +8482,61 @@
                 showSubmission(this.value);
             });
 
+            // Search
+            const performSearch = () => {
+                const searchTerm = $searchInput.val().trim().toLowerCase();
+                if (!searchTerm) {
+                    $searchResultsContainer.html('<p class="small-text">กรุณาป้อนคำเพื่อค้นหา</p>');
+                    return;
+                }
+
+                const searchResults = allQuestions.filter(q => {
+                    const inProblem = q.problem?.toLowerCase().includes(searchTerm) || false;
+                    const inChoices = q.choices?.toLowerCase().includes(searchTerm) || false;
+                    const inExplain = q.explain?.toLowerCase().includes(searchTerm) || false;
+                    return inProblem || inChoices || inExplain;
+                });
+
+                if (searchResults.length === 0) {
+                    $searchResultsContainer.html('<p class="small-text">ไม่พบผลลัพธ์ที่ตรงกัน</p>');
+                    return;
+                }
+
+                let resultsHtml = `
+                    <p class="small-text">พบ ${searchResults.length} ข้อ</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Topic</th>
+                                <th>Question & Choices</th>
+                                <th>Answer</th>
+                                <th>Explanation</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+                searchResults.forEach(q => {
+                    const foundId = checkboxIds.find(id => questionSets[checkboxIds.indexOf(id)].includes(q));
+                    const topicLabel = foundId ? $(`label[for='${foundId}']`).text() : 'Unknown Topic';
+                    const choicesFormatted = q.choices.split('///').map(c => `<li>${c}</li>`).join('');
+                    const explanationText = q.explain ? q.explain.replace(/\n/g, '<br>') : 'No explanation available.';
+
+                    resultsHtml += `
+                        <tr>
+                            <td>${topicLabel}</td>
+                            <td>
+                                <strong>${q.problem.replace(/\n/g, '<br>')}</strong>
+                                <ul style="margin-left: 20px; padding-left: 0;">${choicesFormatted}</ul>
+                            </td>
+                            <td style="color: var(--color-correct); font-weight: bold;">${q.answer}</td>
+                            <td><div style="white-space: pre-wrap; font-family: var(--font-primary); font-weight: 400;">${explanationText}</div></td>
+                        </tr>`;
+                });
+
+                resultsHtml += `</tbody></table>`;
+                $searchResultsContainer.html(resultsHtml);
+            };
+
             // --- UTILITY FUNCTIONS ---
             const transformUrl = (url) => {
                 if (!url) return "";
@@ -8587,6 +8691,14 @@
             $choices.on("click", "button", function () {
                 //if (current_question.state) return;
                 $(this).addClass("selected").siblings().removeClass("selected");
+            });
+
+            // Search Logic
+            $searchBtn.on('click', performSearch);
+            $searchInput.on('keypress', function (e) {
+                if (e.which === 13) { // Enter key pressed
+                    performSearch();
+                }
             });
 
             // Report Modal Logic
