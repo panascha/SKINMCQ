@@ -611,6 +611,8 @@
                     for="L36_Topical_steroid">L36 Topical steroid</label></div>
             <div><input type="checkbox" id="Psoriasis" name="Psoriasis" value="Psoriasis"><label for="Psoriasis">Psoriasis</label>
             </div>
+            <div><input type="checkbox" id="Autoimmune_Skin_Disease" name="Autoimmune_Skin_Disease"
+                    value="Autoimmune_Skin_Disease"><label for="Autoimmune_Skin_Disease">Autoimmune Skin Disease</label></div>
 
             <div class="controls-container">
                 <!-- <button id="save" class="quiz-button">Save to PDF</button> -->
@@ -2212,8 +2214,8 @@
                     {
                         problem: `47. 18 mouth old girl suddenly started refusing all her meals and crying all day. The physical examination revealed multiple sore on her mouth, erythematous vesicle on her palm and sole. ข้อไหนถูก?`,
                         img: ``,
-                        choices: `the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics`,
-                        answer: `Coxsackie virus 71 is a causative agent`,
+                        choices: `the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus B19 and Enterovirus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics`,
+                        answer: `Coxsackie virus B19 and Enterovirus 71 is a causative agent`,
                         select: ``,
                         explain: `จากอาการที่เด็กปฏิเสธการกิน มีแผลในปากหลายแห่ง และมีตุ่มน้ำแดง (erythematous vesicle) ที่ฝ่ามือและฝ่าเท้า เป็นลักษณะคลาสสิกของ Hand, Foot, and Mouth Disease (HFMD) ซึ่งมักเกิดจากเชื้อ Coxsackievirus A16 หรือ Enterovirus 71 (EV71) ครับ โดยเฉพาะ EV71 อาจทำให้เกิดอาการรุนแรงได้`,
                         state: false,
@@ -4518,14 +4520,14 @@
                     explain: "Dysplastic nevus เป็นไฝที่มีลักษณะเซลล์ผิดปกติและถือเป็นรอยโรคก่อนมะเร็ง (precancerous lesion) ที่มีความเสี่ยงสูงต่อการกลายเป็น Malignant melanoma (มะเร็งผิวหนังชนิดเมลาโนมา) ซึ่งเป็นมะเร็งผิวหนังที่อันตรายที่สุด [38]",
                     state: false
                 }, {
-                    problem: "37. คนเป็นมือเท้าปาก ถามว่าข้อใดถูก",
-                    img: "",
-                    choices: "A. Brain encephalitis///B. Coxsackie 71///C. Airborne transmission///D. Caused by HSV///E. Only affects children",
-                    answer: "B. Coxsackie 71",
-                    select: "",
-                    explain: "โรคมือเท้าปาก (Hand-Foot-and-Mouth Disease - HFMD) มักเกิดจากการติดเชื้อ Enterovirus โดยเฉพาะ Coxsackievirus A16 และ Enterovirus 71 (EV71) ซึ่ง EV71 เป็นสายพันธุ์ที่มักก่อให้เกิดอาการรุนแรงและมีภาวะแทรกซ้อนทางระบบประสาทได้ เช่น สมองอักเสบ (Brain encephalitis) ดังนั้นถ้า Coxsackie 71 หมายถึง Enterovirus 71 ข้อนี้จึงเป็นสาเหตุหลักของโรค [39]",
-                    state: false
-                }, {
+                        "problem": "47. 18 mouth old girl suddenly started refusing all her meals and crying all day. The physical examination revealed multiple sore on her mouth, erythematous vesicle on her palm and sole. ข้อไหนถูก?",
+                        "img": "",
+                        "choices": "the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics",
+                        "answer": "Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent",
+                        "select": "",
+                        "explain": "จากอาการที่เด็กปฏิเสธการกิน มีแผลในปากหลายแห่ง และมีตุ่มน้ำแดง (erythematous vesicle) ที่ฝ่ามือและฝ่าเท้า เป็นลักษณะคลาสสิกของ Hand, Foot, and Mouth Disease (HFMD) ซึ่งมักเกิดจากเชื้อ Coxsackievirus A16 หรือ Enterovirus 71 (EV71) ครับ โดยเฉพาะ EV71 อาจทำให้เกิดอาการรุนแรงได้",
+                        "state": false
+                    }, {
                     problem: "38. a 22 years old male came to hospital with .... on his face doctor performed skin scraping and KOH preparation. Septate hyphae was found under a microscope. What is the most appropriate treatment?",
                     img: "",
                     choices: "A. Tolnaftate topical lotion///B. Itraconazole oral///C. Itraconazole topical lotion///D. Terbinafine oral///E. Griseofulvin oral",
@@ -5701,15 +5703,6 @@
                         "state": false
                     },
                     {
-                        "problem": "36. A 29 year-old man worried about many white skin lesions occuring on his chest. His skin scraping was sent to investigate with KOH preparation. the result of tissue form supported the diagnosis of tinia versicolour. What is the tissue form causative agent.",
-                        "img": "https://drive.google.com/open?id=1kZ1bxCuKOf4Y9gOZP6CF7lslt5qO1Ehy&usp=drive_copy",
-                        "choices": "Branching septate hypae///Branching coenocytic septate hyphae and sporagiospore///Budding yeast cells and short hyphae///Encapsulated budding yeast cells///Chain of arthrospore and short hyphae",
-                        "answer": "Budding yeast cells and short hyphae",
-                        "select": "",
-                        "explain": "Tinea versicolor (เกลื้อน) เกิดจากการติดเชื้อรา Malassezia furfur ซึ่งเป็นยีสต์ที่อาศัยอยู่บนผิวหนังตามปกติ ใน KOH preparation จะพบลักษณะเฉพาะของเชื้อรานี้คือ \"spaghetti and meatballs\" appearance ซึ่งประกอบด้วย budding yeast cells (เซลล์ยีสต์ที่แตกหน่อ) และ short hyphae (เส้นใยราสั้นๆ) ครับ",
-                        "state": false
-                    },
-                    {
                         "problem": "54. A 20-year-old woman goes to the hospital with acne vulgaris. The doctor prescribes an anti-acne drug. Which anti-acne drug can cause Stevens-Johnson syndrome?",
                         "img": "",
                         "choices": "Amoxicillin///Bactrim///Clindamycin///Doxycycline///Erythromycin",
@@ -6752,8 +6745,8 @@
                     {
                         "problem": "47. 18 mouth old girl suddenly started refusing all her meals and crying all day. The physical examination revealed multiple sore on her mouth, erythematous vesicle on her palm and sole. ข้อไหนถูก?",
                         "img": "",
-                        "choices": "the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics",
-                        "answer": "Coxsackie virus 71 is a causative agent",
+                        "choices": "the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics",
+                        "answer": "Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent",
                         "select": "",
                         "explain": "จากอาการที่เด็กปฏิเสธการกิน มีแผลในปากหลายแห่ง และมีตุ่มน้ำแดง (erythematous vesicle) ที่ฝ่ามือและฝ่าเท้า เป็นลักษณะคลาสสิกของ Hand, Foot, and Mouth Disease (HFMD) ซึ่งมักเกิดจากเชื้อ Coxsackievirus A16 หรือ Enterovirus 71 (EV71) ครับ โดยเฉพาะ EV71 อาจทำให้เกิดอาการรุนแรงได้",
                         "state": false
@@ -6984,12 +6977,12 @@
                         "state": false
                     },
                     {
-                        "problem": "37. คนเป็นมือเท้าปาก ถามว่าข้อใดถูก",
+                        "problem": "47. 18 mouth old girl suddenly started refusing all her meals and crying all day. The physical examination revealed multiple sore on her mouth, erythematous vesicle on her palm and sole. ข้อไหนถูก?",
                         "img": "",
-                        "choices": "A. Brain encephalitis///B. Coxsackie 71///C. Airborne transmission///D. Caused by HSV///E. Only affects children",
-                        "answer": "B. Coxsackie 71",
+                        "choices": "the causative agent is transmitted by air borne///Rectal swap culture should be performed///Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent///เลี่ยงการสัมผัส///Administer antibiotics",
+                        "answer": "Coxsackie virus ฺ19 and Enterovirus 71 is a causative agent",
                         "select": "",
-                        "explain": "โรคมือเท้าปาก (Hand-Foot-and-Mouth Disease - HFMD) มักเกิดจากการติดเชื้อ Enterovirus โดยเฉพาะ Coxsackievirus A16 และ Enterovirus 71 (EV71) ซึ่ง EV71 เป็นสายพันธุ์ที่มักก่อให้เกิดอาการรุนแรงและมีภาวะแทรกซ้อนทางระบบประสาทได้ เช่น สมองอักเสบ (Brain encephalitis) ดังนั้นถ้า Coxsackie 71 หมายถึง Enterovirus 71 ข้อนี้จึงเป็นสาเหตุหลักของโรค [39]",
+                        "explain": "จากอาการที่เด็กปฏิเสธการกิน มีแผลในปากหลายแห่ง และมีตุ่มน้ำแดง (erythematous vesicle) ที่ฝ่ามือและฝ่าเท้า เป็นลักษณะคลาสสิกของ Hand, Foot, and Mouth Disease (HFMD) ซึ่งมักเกิดจากเชื้อ Coxsackievirus A16 หรือ Enterovirus 71 (EV71) ครับ โดยเฉพาะ EV71 อาจทำให้เกิดอาการรุนแรงได้",
                         "state": false
                     },
                     {
@@ -8773,7 +8766,423 @@
                         explain: "ผื่นที่ผิวหนังเป็นรอยแดงมีขุยสะเก็ดสีเงิน (erythematous plaques with silvery scales) ดังภาพ เป็นลักษณะของโรค Psoriasis ซึ่งเป็นโรคผิวหนังอักเสบเรื้อรังที่เกิดจากความผิดปกติของระบบภูมิคุ้มกัน (immune dysregulation) โดยมีปัจจัยทางพันธุกรรมและสิ่งแวดล้อมเข้ามาเกี่ยวข้อง สาเหตุที่แท้จริงของการเกิดโรคจึงไม่ถูกระบุว่าเป็นเชื้อโรคภายนอก (bacteria, fungi, virus) หรือสารก่อการระคายเคือง (contact irritants) โดยตรง ดังนั้น 'Unknown' (ไม่ทราบสาเหตุ) เป็นตัวเลือกที่สะท้อนถึงความซับซ้อนของกลไกการเกิดโรคได้ดีที่สุดในบริบทนี้",
                         state: false
                     }
+                ],
+                "Autoimmune_Connective_Tissue_Disease": [
+                    {
+                        "problem": "2. A 22-year-old woman presented with multiple painful rashes on lower limbs for 2 weeks. She also complained of joint swelling and pain. The examination revealed several purpuric papules with some hemorrhagic vesicles on her lower extremities. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Panniculitis///Vasculitis syndrome///Septicemic infection///Thrombocytopenic purpura///Stevens-Johnson syndrome",
+                        "answer": "Vasculitis syndrome",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีผื่นลักษณะจำเพาะคือ palpable purpura (ผื่นจ้ำเลือดที่คลำได้เป็นตุ่มนูน) ร่วมกับอาการปวดข้อ (arthralgia) ซึ่งเป็นอาการแสดงสำคัญของกลุ่มโรคหลอดเลือดอักเสบ (Vasculitis syndrome) โดยเฉพาะหลอดเลือดขนาดเล็ก (small-vessel vasculitis) ที่ผิวหนังบริเวณขาส่วนล่าง ส่วนตัวเลือกอื่น: a. Panniculitis คือการอักเสบของไขมันใต้ผิวหนัง, c. Septicemic infection อาจมีผื่นได้แต่ลักษณะหลากหลายและมีไข้สูง, d. Thrombocytopenic purpura ผื่นจะราบ คลำไม่ได้ตุ่ม เกิดจากเกล็ดเลือดต่ำ, e. Stevens-Johnson syndrome เป็นการแพ้ยาอย่างรุนแรง มีแผลที่เยื่อบุต่างๆ",
+                        "state": false
+                    },
+                    {
+                        "problem": "3. A 50-year-old man presented with well-demarcated erythematous plaques with silvery scales distributed along the extensor surfaces of the extremities, trunk, and scalp for 5 years. Which of the following diseases is the patient most likely at risk for?",
+                        "img": "",
+                        "choices": "Metabolic syndrome///Osteoarthritis///Alzheimer'd disease///Chronic Obstructive Pulmonary Disease///Irritable bowel syndrome",
+                        "answer": "Metabolic syndrome",
+                        "select": "",
+                        "explain": "ลักษณะผื่นปื้นแดง ขอบเขตชัด มีขุยสีเงินหนา (well-demarcated erythematous plaques with silvery scales) บริเวณข้อศอก เข่า (extensor surfaces) และหนังศีรษะ เป็นลักษณะคลาสสิกของโรคสะเก็ดเงิน (Psoriasis) ซึ่งเป็นโรคผิวหนังอักเสบเรื้อรังที่สัมพันธ์กับการอักเสบในระบบอื่นของร่างกาย (systemic inflammation) ทำให้ผู้ป่วยมีความเสี่ยงสูงต่อการเกิดโรคร่วม (comorbidities) อื่นๆ โดยเฉพาะกลุ่มอาการเมตาบอลิก (Metabolic syndrome) ซึ่งประกอบด้วยโรคอ้วนลงพุง ความดันโลหิตสูง ไขมันในเลือดผิดปกติ และภาวะดื้อต่ออินซูลิน",
+                        "state": false
+                    },
+                    {
+                        "problem": "4. A 30-year-old woman presented with painful erosions on her lips and genitalia for 2 days. Physical examination also revealed multiple round skin lesions with three concentric color zones on her hands and feet. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Erythema multiforme///Oral lichen planus///Stevens-Johnson Syndrome///Pemphigus vulgaris///Fixed drug eruption",
+                        "answer": "Erythema multiforme",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีแผลที่เยื่อบุ (ริมฝีปาก อวัยวะเพศ) ร่วมกับผื่นที่ผิวหนัง ลักษณะสำคัญคือ 'target lesions' หรือ 'ผื่นเป้า' ซึ่งมีลักษณะเป็นวงสามสีซ้อนกัน (three concentric color zones) บริเวณมือและเท้า เป็นลักษณะจำเพาะของโรค Erythema Multiforme (EM) ซึ่งมักเกิดจากการติดเชื้อ (เช่น Herpes simplex virus) หรือการแพ้ยา ตัวเลือก c. Stevens-Johnson Syndrome (SJS) เป็นภาวะที่รุนแรงกว่า แม้จะอยู่ในกลุ่มโรคเดียวกัน แต่ SJS จะมีแผลที่เยื่อบุรุนแรงและผื่นผิวหนังมักเป็นแบบ atypical target หรือ purpuric macules ที่ลุกลามอย่างรวดเร็ว",
+                        "state": false
+                    },
+                    {
+                        "problem": "11. Which of the following dermatological conditions is an appropriate indication for the use of 0.1% Triamcinolone cream?",
+                        "img": "",
+                        "choices": "Verruca vulgaris///Tinea corporis///Acne vulgaris///Herpes simplex infection///Psoriasis vulgaris",
+                        "answer": "Psoriasis vulgaris",
+                        "select": "",
+                        "explain": "ยา 0.1% Triamcinolone cream เป็นยาสเตียรอยด์ชนิดทาภายนอกที่มีความแรงปานกลาง (medium-potency topical corticosteroid) ใช้สำหรับลดการอักเสบของผิวหนัง (anti-inflammatory effect) ตัวเลือก e. Psoriasis vulgaris หรือโรคสะเก็ดเงิน เป็นโรคผิวหนังอักเสบเรื้อรังซึ่งเป็นข้อบ่งชี้ที่สำคัญและพบบ่อยที่สุดในการใช้ยาสเตียรอยด์ชนิดทาเพื่อควบคุมการอักเสบและลดขุยของผื่น ส่วนตัวเลือกอื่นเป็นโรคติดเชื้อ (หูด-ไวรัส, กลาก-เชื้อรา, เริม-ไวรัส) ซึ่งการใช้สเตียรอยด์อย่างเดียวจะทำให้โรคแย่ลง หรือสิว (Acne) ซึ่งไม่ใช่ข้อบ่งชี้หลักในการใช้ยาทาสเตียรอยด์",
+                        "state": false
+                    },
+                    {
+                        "problem": "14. A 40-year-old male presented with itchy bullous lesions right foot for 5 days. What is the most likely pathogenesis of his disease?",
+                        "img": "https://drive.google.com/open?id=1vc9LqDQLEeXlZ7qMvmGTfXszIsXV-bmr&usp=drive_copy",
+                        "choices": "Herpes virus infection///Varicella zoster virus infection///Autoantibody against desmosome///Autoantibody against hemidesmosome///Helminthic infestation",
+                        "answer": "Autoantibody against hemidesmosome",
+                        "select": "",
+                        "explain": "จากรูปจะเห็นตุ่มน้ำพองขนาดใหญ่และเต่งตึง (large, tense bullae) ซึ่งเป็นลักษณะสำคัญของโรค Bullous Pemphigoid ซึ่งเป็นโรคตุ่มน้ำพองจากภูมิคุ้มกันวิปริต (autoimmune blistering disease) ที่พบบ่อยที่สุดในผู้สูงอายุ พยาธิกำเนิดของโรคนี้เกิดจากการที่ร่างกายสร้างแอนติบอดี (autoantibody) ชนิด IgG ต่อโปรตีนที่เป็นส่วนประกอบของ Hemidesmosome (คือ BP180 และ BP230) ซึ่งเป็นโครงสร้างที่ทำหน้าที่ยึดระหว่างชั้นหนังกำพร้า (epidermis) และชั้นหนังแท้ (dermis) การทำลาย Hemidesmosome ทำให้ผิวหนังสองชั้นนี้แยกออกจากกันเกิดเป็นตุ่มน้ำพองชนิด subepidermal split ที่มีลักษณะเต่งตึง ไม่แตกง่าย ส่วนข้อ c. Autoantibody against desmosome เป็นพยาธิกำเนิดของโรค Pemphigus vulgaris ซึ่งตุ่มน้ำจะเหี่ยวและแตกง่ายกว่า",
+                        "state": false
+                    },
+                    {
+                        "problem": "15. A 42-year-old man with a history of sinusitis and chronic cough for 2 months. He was treated with different antibiotics without any improvement. Chest X-ray was performed and showed multiple cavitary lesions. Urinalysis revealed RBC casts. Blood test for C-ANCA was positive. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Granulomatosis with polyangiitis///Polyarteritis nodosa///Microscopic polyangiitis///Eosinophilic granulomatosis with polyangiitis///Systemic lupus erythematosus",
+                        "answer": "Granulomatosis with polyangiitis",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการแสดงครบสามอย่าง (classic triad) ของโรค Granulomatosis with Polyangiitis (GPA) หรือชื่อเดิมคือ Wegener's granulomatosis ซึ่งเป็นโรคในกลุ่ม ANCA-associated vasculitis ได้แก่ 1) การอักเสบของทางเดินหายใจส่วนบนและล่าง (ไซนัสอักเสบ, ไอเรื้อรัง, ภาพรังสีทรวงอกพบโพรง-cavitary lesions) 2) การอักเสบของไต (glomerulonephritis) ตรวจพบเม็ดเลือดแดงในปัสสาวะ (RBC casts) และ 3) ผลเลือดพบ C-ANCA (antineutrophil cytoplasmic antibody) เป็นบวก ซึ่งมีความจำเพาะต่อโรคนี้สูงมาก",
+                        "state": false
+                    },
+                    {
+                        "problem": "16. A middle aged woman presented with generalized flaccid blisters on trunk and both extremities. Oral erosion was seen at both buccal mucosa. Direct immunofluorescence showed deposition of IgG and C3 on the intercellular spaces of keratinocytes. What is the pathogenesis?",
+                        "img": "",
+                        "choices": "Antibody to desmoglein 1 and 3///Antibody to desmocollin///Antibody to transglutaminase///Antibody to BPAg2///Antibody to desmoplakin",
+                        "answer": "Antibody to desmoglein 1 and 3",
+                        "select": "",
+                        "explain": "ลักษณะทางคลินิกคือตุ่มน้ำพองที่เหี่ยวง่าย แตกง่าย (flaccid blisters) และมีแผลในปาก (oral erosion) เป็นลักษณะของโรค Pemphigus Vulgaris (PV) ผลการตรวจทางพยาธิวิทยาด้วยเทคนิค Direct Immunofluorescence (DIF) ที่พบลักษณะ 'chicken-wire' pattern ของ IgG และ C3 ติดอยู่ระหว่างเซลล์ keratinocytes (intercellular spaces) เป็นการยืนยันการวินิจฉัย พยาธิกำเนิดของ PV เกิดจากร่างกายสร้าง autoantibody ต่อโปรตีน Desmoglein ซึ่งเป็นส่วนประกอบของ desmosome ที่ยึดเซลล์ผิวหนังเข้าด้วยกัน โดยใน PV ชนิดที่มีรอยโรคทั้งที่ผิวหนังและเยื่อบุ (mucocutaneous form) จะตรวจพบแอนติบอดีต่อทั้ง Desmoglein 1 (Dsg1) และ Desmoglein 3 (Dsg3)",
+                        "state": false
+                    },
+                    {
+                        "problem": "17. A 40-year-old female presented with blisters and erosions on trunk and both extremities for 1 month. She also had oral ulcers at both buccal mucosa and hard palate. Tzanck's smear showed round homogenous cells containing hyperchromatic nuclei and perinuclear halo. What is the most likely diagnosis?",
+                        "img": "",
+                        "choices": "Pemphigus vulgaris///Bullous pemphigoid///Toxic epidermal necrolysis///Herpes zoster///Herpes simplex infection",
+                        "answer": "Pemphigus vulgaris",
+                        "select": "",
+                        "explain": "การตรวจ Tzanck's smear พบเซลล์ลักษณะเฉพาะคือ Acantholytic cells (หรือ Tzanck cells) ซึ่งเป็นเซลล์ผิวหนัง (keratinocyte) ที่แยกตัวออกจากกัน มีลักษณะกลม นิวเคลียสติดสีเข้ม (hyperchromatic nuclei) และมีขอบใสๆ รอบนิวเคลียส (perinuclear halo) การพบเซลล์ชนิดนี้บ่งชี้ถึงกระบวนการ acantholysis หรือการสลายของ desmosome ที่ยึดระหว่างเซลล์ผิวหนัง ซึ่งเป็นกลไกหลักของโรคในกลุ่ม Pemphigus เมื่อร่วมกับอาการทางคลินิกที่มีตุ่มน้ำพองและแผลถลอกทั้งที่ผิวหนังและในปาก จึงวินิจฉัยได้ว่าเป็น Pemphigus vulgaris ส่วนในโรคเริม (Herpes) จะพบเซลล์ยักษ์หลายนิวเคลียส (multinucleated giant cells)",
+                        "state": false
+                    },
+                    {
+                        "problem": "18. A 45-year-old man presented with tingling, numbness, and transient white and blue discoloration of digits of hands and feet when exposed to cold environment for 2 years. He also had difficulty of swallowing. Physical examination showed thickening and tightness of skin of fingers and toes, and matted telangiectasia on face and upper chest. What is the most useful test for diagnosis?",
+                        "img": "",
+                        "choices": "Complement level///Anti-centromere antibody///Anti-Scl-70 antibody///ANA///Anti-histone antibody",
+                        "answer": "Anti-centromere antibody",
+                        "select": "",
+                        "explain": "กลุ่มอาการของผู้ป่วย ได้แก่ อาการปลายนิ้วซีดเขียวเมื่อโดนความเย็น (Raynaud's phenomenon), กลืนลำบาก (esophageal dysmotility), ผิวหนังที่นิ้วมือแข็งตึง (sclerodactyly) และมีเส้นเลือดฝอยผิดปกติที่ใบหน้า (telangiectasia) เป็นลักษณะที่จำเพาะของกลุ่มอาการ CREST ซึ่งเป็นรูปแบบหนึ่งของโรคหนังแข็งชนิดจำกัด (Limited Cutaneous Systemic Sclerosis - lcSSc) การตรวจทางห้องปฏิบัติการที่จำเพาะและมีประโยชน์ที่สุดในการวินิจฉัยภาวะนี้คือการตรวจหา Anti-centromere antibody (ACA) ซึ่งพบได้ในผู้ป่วย lcSSc ถึง 60-80% ส่วน Anti-Scl-70 antibody มักพบในโรคหนังแข็งชนิดแพร่กระจาย (diffuse form) ซึ่งมีอาการทางผิวหนังที่รุนแรงและรวดเร็วกว่า",
+                        "state": false
+                    },
+                    {
+                        "problem": "19. Which is the topical calcineurin inhibitor that can be used for treatment of Psoriasis skin?",
+                        "img": "",
+                        "choices": "Anthralin///Azathioprine///Tazarotene///Cyclosporine///Tacrolimus",
+                        "answer": "Tacrolimus",
+                        "select": "",
+                        "explain": "ยาในกลุ่ม Calcineurin inhibitors ออกฤทธิ์ยับยั้งการทำงานของ T-cell ทำให้ลดการหลั่งสารอักเสบ (inflammatory cytokines) ยากลุ่มนี้มีทั้งในรูปแบบรับประทานและยาทา ตัวเลือก e. Tacrolimus เป็นยาในกลุ่มนี้ที่มีในรูปแบบยาทา (topical ointment) ซึ่งนิยมนำมาใช้รักษาโรคสะเก็ดเงิน (Psoriasis) ในบริเวณที่ผิวบอบบาง (sensitive areas) เช่น ใบหน้า, ข้อพับ, อวัยวะเพศ เพื่อหลีกเลี่ยงผลข้างเคียงของยาสเตียรอยด์ ส่วน Cyclosporine (d) เป็นยากลุ่มเดียวกันแต่อยู่ในรูปแบบรับประทาน",
+                        "state": false
+                    },
+                    {
+                        "problem": "20. If the doctor prescribes topical retinoids for treatment of Psoriasis skin lesion. What is the most common side effect of this drug that may occur in this patient?",
+                        "img": "",
+                        "choices": "Petechiae///Purpura///Impetigo///Photosensitivity///Acne",
+                        "answer": "Photosensitivity",
+                        "select": "",
+                        "explain": "ยาทาในกลุ่ม Retinoids (เช่น Tazarotene) ที่ใช้รักษาสะเก็ดเงิน ออกฤทธิ์โดยการปรับการแบ่งตัวและพัฒนาของเซลล์ผิวหนังให้เป็นปกติ ผลข้างเคียงที่พบบ่อยที่สุดของยาทากลุ่มนี้คือการระคายเคืองผิวหนังเฉพาะที่ (local irritation) เช่น อาการแดง, แสบ, คัน, และผิวลอก ซึ่งผลข้างเคียงเหล่านี้ทำให้ผิวหนังไวต่อแสงแดดมากขึ้น (Photosensitivity) ดังนั้นผู้ป่วยที่ใช้ยานี้จึงควรหลีกเลี่ยงแสงแดดจัดและใช้ครีมกันแดดเป็นประจำ",
+                        "state": false
+                    },
+                    {
+                        "problem": "21. What is the mechanism of action of topical calcipotriol for treatment of Psoriasis skin?",
+                        "img": "",
+                        "choices": "Increase proliferation of keratinocytes///Increase mitotic activity in epidermis///Increase differentiation of keratinocytes///Reduce onchronosis///Increase skin growth",
+                        "answer": "Increase differentiation of keratinocytes",
+                        "select": "",
+                        "explain": "โรคสะเก็ดเงิน (Psoriasis) มีพยาธิสภาพที่สำคัญคือเซลล์ผิวหนัง (keratinocytes) แบ่งตัวเร็วกว่าปกติ (hyperproliferation) และเจริญพัฒนาไปเป็นเซลล์ที่สมบูรณ์ได้ไม่ดี (abnormal differentiation) ยา Calcipotriol เป็นอนุพันธ์ของวิตามินดี 3 (Vitamin D3 analogue) ซึ่งออกฤทธิ์โดยการจับกับ Vitamin D receptor ที่อยู่บน keratinocytes กลไกหลักคือการยับยั้งการแบ่งตัวที่ผิดปกติของเซลล์ผิวหนัง และที่สำคัญคือการกระตุ้นให้เซลล์ผิวหนังมีการเจริญพัฒนาไปเป็นเซลล์ที่สมบูรณ์ (promote/increase normal keratinocyte differentiation) ทำให้ลักษณะผื่นหนาและขุยลดลง",
+                        "state": false
+                    },
+                    {
+                        problem: `46. An 8-year-old girl presents with acute fever, arthralgia, and an erythematous rash. Her parents report that she had a sore throat 2 weeks ago. What is a potential complication of her preceding illness?`,
+                        img: ``,
+                        choices: `Aplastic anemia///Hydrops fetalis///Acute glomerulonephritis///Rheumatic fever///Carditis`,
+                        answer: `Acute glomerulonephritis`,
+                        select: ``,
+                        explain: `อาการไข้เฉียบพลัน ปวดข้อ (arthralgia) และผื่นแดง (erythematous rash) ในเด็ก อาจบ่งชี้ถึงการติดเชื้อ streptococcal infections (เช่น Group A Streptococcus) ซึ่งอาจนำไปสู่ภาวะแทรกซ้อนหลังการติดเชื้อ เช่น Acute post-streptococcal glomerulonephritis (PSGN) หรือ Rheumatic fever ได้ครับ โดยเฉพาะ PSGN มักเกิดหลังจากการติดเชื้อที่ผิวหนังหรือคอหอย`,
+                        state: false,
+                    },
+                    {
+                        problem: "19. Disease which over proliferation and differentiation of epidermis",
+                        img: "",
+                        choices: "Atopic dermatitis///Psoriasis///Eczema///Dermatitis///Acne",
+                        answer: "Psoriasis",
+                        select: "",
+                        explain: "Psoriasis เป็นโรคผิวหนังเรื้อรังที่โดดเด่นด้วยการเพิ่มจำนวน (over proliferation) และการเปลี่ยนแปลง (differentiation) ของเซลล์ epidermis อย่างรวดเร็ว ทำให้เกิดผื่นแดง มีสะเก็ดเงิน และหนาตัวขึ้น [N/A]",
+                        state: false
+                    },
+                    {
+                        problem: "39. Patient has lesions for 1 week. What is a the cause?",
+                        img: "https://drive.google.com/open?id=14YYloLARaCQQ4803BgH0ws3zSyndpeUu&usp=drive_copy",
+                        choices: "A. Drug induced///B. Recurrent from past history///C. Anti-HIV positive///D. Microbial dysbiosis///E. Hypersensitivity",
+                        answer: "E. Hypersensitivity",
+                        select: "",
+                        explain: "ผื่นในภาพคือโรคสะเก็ดเงินชนิดหยดน้ำ (Guttate Psoriasis) ซึ่งเกิดจากภาวะที่ระบบภูมิคุ้มกันไวต่อสิ่งกระตุ้น (Hypersensitivity) โดยมีสาเหตุชักนำที่พบบ่อยที่สุดคือการติดเชื้อแบคทีเรียสเตรปโตคอคคัสในลำคอก่อนหน้านี้ [General knowledge of psoriasis triggers]",
+                        state: false
+                    },
+                    {
+                        problem: "40. (The question described a picture of flaccid bullae around the genitalia and asked about associated symptoms.) What associated symptoms might be present?",
+                        img: "",
+                        choices: "A. Cough and fever like///B. Erosion with burning at genitalia///C. Aphthous ulcer at mucosal tissue///D. Oral erosions///E. Joint pain",
+                        answer: "D. Oral erosions",
+                        select: "",
+                        explain: "Flaccid bullae (ตุ่มน้ำพองที่แตกง่าย) บริเวณอวัยวะเพศ โดยเฉพาะถ้ามีร่วมกับรอยโรคในช่องปาก (oral erosions) มักบ่งชี้ถึง Pemphigus vulgaris ซึ่งเป็นโรคผิวหนังที่เกิดจากภูมิคุ้มกันผิดปกติที่โจมตี Desmosomes ทำให้เซลล์ผิวหนังแยกตัวออกจากกันและเกิดตุ่มน้ำพองที่แตกง่าย [General knowledge of bullous diseases]",
+                        state: false
+                    },
+                    {
+                        problem: "42. Patient comes with Subcutaneous nodule with livedo reticularis. What is the diagnosis?",
+                        img: "",
+                        choices: "A. Wegener's granulomatosis///B. Henoch-Schonlein purpura///C. Polyarteritis nodosa///D. Modular vasculitis///E. Churg-Strauss",
+                        answer: "C. Polyarteritis nodosa",
+                        select: "",
+                        explain: "การมี Subcutaneous nodule ร่วมกับ Livedo reticularis (ผิวลายเป็นร่างแห) เป็นลักษณะที่พบบ่อยใน Polyarteritis nodosa ซึ่งเป็นโรคหลอดเลือดอักเสบชนิดหนึ่งที่ส่งผลต่อหลอดเลือดแดงขนาดกลาง ทำให้เกิดการอุดตันและขาดเลือดของเนื้อเยื่อ [General knowledge of vasculitis]",
+                        state: false
+                    },
+                    {
+                        problem: "43. A middle-aged man has numbness of hands when it's cold. Every finger except thumbs of 2 hands were marked pallor during the attacks and will become red again when it's warm in 30 minutes. what is the pathogenesis?",
+                        img: "",
+                        choices: "A. Neurologic syndrome///B. Thrombosis///C. Vasculitis///D. Vasospasm///E. Cold hypersensitivity",
+                        answer: "D. Vasospasm",
+                        select: "",
+                        explain: "อาการนิ้วมือชาเมื่อสัมผัสความเย็น (numbness of hands when it's cold) และมีการเปลี่ยนสีจากซีดเป็นแดงเมื่ออุ่นขึ้น (pallor to redness) โดยเฉพาะที่นิ้วมือ ยกเว้นนิ้วโป้ง เป็นลักษณะคลาสสิกของ Raynaud's phenomenon ซึ่งมีสาเหตุมาจาก Vasospasm ของหลอดเลือดขนาดเล็กที่ปลายมือปลายเท้า [General knowledge of Raynaud's phenomenon]",
+                        state: false
+                    },
+                    {
+                        problem: "44. The patient has digital pitting scar. What is most likely the diagnosis?",
+                        img: "",
+                        choices: "A. Scleroderma///B. Raynaud phenomenon///C. SLE///D. Polyarteritis nodosa///E. Panniculitis",
+                        answer: "A. Scleroderma",
+                        select: "",
+                        explain: "Digital pitting scar (แผลเป็นหลุมเล็กๆ ที่ปลายนิ้ว) เป็นลักษณะที่พบบ่อยและจำเพาะในผู้ป่วย Scleroderma (Systemic sclerosis) ซึ่งเป็นโรคเนื้อเยื่อเกี่ยวพันที่ทำให้เกิดพังผืดและหลอดเลือดเสียหาย โดยเฉพาะที่ปลายนิ้ว [General knowledge of Scleroderma manifestations]",
+                        state: false
+                    },
+                    {
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
+                        "img": "",
+                        "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
+                        "answer": "Skin biopsy of IgA",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
+                    },
+                    {
+                        problem: "47. A middle age woman presented with flaccid blister on trunk and both arm. Oral erosion was seen on buccal mucosa. What is the pathogenesis?",
+                        img: "",
+                        choices: "A. Antibody to desmocollin///B. Antibody to desmoglein 1,3///C. Antibody to BPAg 2///D. Antibody to glutaminase///E. Antibody to something else",
+                        answer: "B. Antibody to desmoglein 1,3",
+                        select: "",
+                        explain: "ลักษณะตุ่มน้ำพองที่แตกง่าย (flaccid blister) ที่ลำตัวและแขน ร่วมกับรอยโรคในช่องปาก (oral erosion on buccal mucosa) บ่งชี้ถึง Pemphigus vulgaris ซึ่งมีสาเหตุมาจาก Autoantibodies ต่อ Desmoglein 1 และ 3 ซึ่งเป็นโปรตีนที่เชื่อมเซลล์ผิวหนังเข้าด้วยกัน (Desmosomes) ทำให้เกิดการแยกตัวของเซลล์ (acantholysis) และตุ่มน้ำพอง [45]",
+                        state: false
+                    },
+                    {
+                        problem: "48. The man has tense bullous, Tzanck smear reveals eosinophils. What is the pathogenesis of this disease?",
+                        img: "",
+                        choices: "A. BPAG1///B. Desmoglein 1,3///C. Collagen VII///D. Transglutaminase///E. Cadherin",
+                        answer: "A. BPAG1",
+                        select: "",
+                        explain: "ลักษณะตุ่มน้ำพองที่ตึง (tense bullous) และผล Tzanck smear พบ Eosinophils เป็นลักษณะของ Bullous Pemphigoid ซึ่งมีสาเหตุมาจาก Autoantibodies ต่อโปรตีน BPAG1 (หรือ BP230) และ BPAG2 (หรือ BP180) ซึ่งเป็นส่วนประกอบของ Hemidesmosomes ที่ยึดชั้นผิวหนังเข้ากับชั้นล่าง ทำให้เกิดการแยกตัวของผิวหนังใต้ epidermis [10, 29, 31, 40, 45]",
+                        state: false
+                    },
+                    {
+                        problem: "49. 60 years old female come with annual, polycyclic and papulosquamous for 1 month She had diagnosed for hypertension and received calcium channel inhibitors for 1 year What is laboratory test for the diagnosis",
+                        img: "",
+                        choices: "A. Anti-ro///B. c-Anca ESR///C. Anti-histone///D. Skin biopsy///E. ANA",
+                        answer: "C. Anti-histone",
+                        select: "",
+                        explain: "ผื่น Annular, Polycyclic และ Papulosquamous ที่เกิดขึ้นในผู้ป่วยที่ใช้ Calcium Channel Inhibitors (CCBs) มา 1 ปี โดยเฉพาะในผู้สูงอายุ ควรสงสัยภาวะ Drug-induced lupus erythematosus ซึ่งมักเกี่ยวข้องกับการพบ Anti-histone antibodies [General knowledge of drug-induced lupus]",
+                        state: false
+                    },
+                    {
+                        problem: "50. A 45-year-old woman was found with annular/polycyclic, no fever and other symptoms. What test should be done?",
+                        img: "",
+                        choices: "A. ESR///B. Anti-Ro/SS-A///C. Complement level///D. C-ANCA///E. Anti-histoneAb",
+                        answer: "B. Anti-Ro/SS-A",
+                        select: "",
+                        explain: "ผื่น Annular/Polycyclic โดยไม่มีอาการอื่นๆ (เช่น ไข้) ในผู้หญิงวัยกลางคน ควรพิจารณาภาวะ Subacute Cutaneous Lupus Erythematosus (SCLE) ซึ่งมักพบ Anti-Ro/SS-A antibodies เป็นบวก [General knowledge of SCLE]",
+                        state: false
+                    },
+                    {
+                        problem: "76. A 40 years old patient came with psoriasis skin lesion. Which drug is topical immunosuppressive drug that doctor prescribe?",
+                        img: "",
+                        choices: "A. Anthralin///B. Tazarotene///C. Tacrolimus///D. Cyclosporin///E. Benzbromarone",
+                        answer: "C. Tacrolimus",
+                        select: "",
+                        explain: "Tacrolimus เป็น Topical calcineurin inhibitor ซึ่งจัดเป็น Topical immunosuppressive drug ที่ใช้ในการรักษา Psoriasis โดยเฉพาะในบริเวณที่ผิวบอบบาง เช่น ใบหน้า หรือบริเวณข้อพับ เพื่อหลีกเลี่ยงผลข้างเคียงจากการใช้ Topical corticosteroids [General knowledge of psoriasis treatment]",
+                        state: false
+                    },
+                    {
+                        problem: "29. A 45-year-old female presented with low-grade fever and generalized arthralgia for 3 mouths. She had been diagnosed with hypertension and had taken hydralazine for 5 months. physical examination: no lymphadenopathy Laboratory tests showed anemia, lymphopenia, lymphopenia pleural effusion, and a positive anti-histone antibody. What is the most likely diagnosis?",
+                        img: "",
+                        choices: "Rheumatoid arthritis///Drug induce systemic lupus erythematosus///Eosinophilic granulomatosis with polyangiitis///Tuberculosis///Sjögren's syndrome",
+                        answer: "Drug induce systemic lupus erythematosus",
+                        select: "",
+                        explain: "อาการไข้ต่ำๆ (low-grade fever), ปวดข้อทั่วตัว (generalized arthralgia) ร่วมกับประวัติการใช้ยา hydralazine ซึ่งเป็นยาที่ทราบกันดีว่าสามารถกระตุ้นให้เกิดโรค Drug-induced systemic lupus erythematosus (DILE) ได้ และที่สำคัญคือผลตรวจพบ positive anti-histone antibody ซึ่งเป็นเครื่องหมายจำเพาะของ DILE ยิ่งตอกย้ำการวินิจฉัยนี้. [9]"
+                    },
+                    {
+                        problem: "30. A 50-year-old woman presents with a history of a 2-month-long fever and generalized myalgia. The physical examination reveals high blood pressure, subcutaneous nodules, and livedo reticularis. She also lost her left tibia and right ulnar nerve function. What is the diagnosis?",
+                        img: "",
+                        choices: "Systemic lupus erythematosus///Granulomatosis with polyangiitis///Giant cell polyangiitis///Polyarteritis nodosa///Eosinophilic granulomatosis with polyangiitis",
+                        answer: "Polyarteritis nodosa",
+                        select: "",
+                        explain: "อาการไข้เรื้อรัง (fever), ปวดกล้ามเนื้อ (myalgia), ความดันโลหิตสูง (high blood pressure), ตุ่มใต้ผิวหนัง (subcutaneous nodules), livedo reticularis (ลายตาข่าย), และอาการทางระบบประสาทที่แสดงถึง mononeuritis multiplex (การสูญเสียการทำงานของเส้นประสาทเฉพาะส่วน เช่น tibial และ ulnar nerve) เป็นลักษณะทางคลินิกที่เข้ากันได้กับ Polyarteritis nodosa (PAN) ซึ่งเป็นภาวะหลอดเลือดอักเสบ (vasculitis) ที่ส่งผลต่อหลอดเลือดแดงขนาดกลาง. [9]"
+                    },
+                    {
+                        problem: "31. A middle-aged man has numbness of hands when it's cold. Every finger except thumbs of 2 hands were marked pallor during the attacks and will become red again when it's warm in 30 minutes. what is the pathogenesis?",
+                        img: "",
+                        choices: "Neurologic syndrome///Thrombosis///Vasculitis///Vasospasm///Cold hypersensitivity",
+                        answer: "Vasospasm",
+                        select: "",
+                        explain: "อาการชาที่มือเมื่อสัมผัสความเย็น (numbness of hands when it's cold) นิ้วมือซีด (pallor) ยกเว้นนิ้วหัวแม่มือ และกลับมาแดงเมื่ออุ่นขึ้น (red again when warm) ภายใน 30 นาที เป็นลักษณะจำเพาะของ Raynaud's phenomenon ซึ่งเกิดจากการหดเกร็งของหลอดเลือด (vasospasm) ในหลอดเลือดแดงเล็กๆ ที่ไปยังนิ้วมือและนิ้วเท้า. [9]"
+                    },
+                    {
+                        "problem": "A 14-year-old girl presented with diffused colicky pain and rash for 3 days. Physical examination showed palpable purpura and generalized abdominal tenderness. Lab investigation showed RBC 5-10, RBC casted urine. What is the proper investigation?",
+                        "img": "",
+                        "choices": "ESR///ANA///Throat swab culture///Skin biopsy of IgA///Film (Blood smear)",
+                        "answer": "Skin biopsy of IgA",
+                        "select": "",
+                        "explain": "ผู้ป่วยมีอาการครบตามเกณฑ์การวินิจฉัยของโรค Henoch-Schönlein purpura (HSP) หรือ IgA vasculitis ซึ่งประกอบด้วยอาการหลัก 4 อย่างคือ 1. Palpable purpura (ผื่นจ้ำเลือดที่คลำได้) 2. Abdominal pain (ปวดท้อง) 3. Arthritis/Arthralgia (ปวดข้อ) และ 4. Renal involvement (อาการทางไต) ซึ่งในผู้ป่วยรายนี้พบได้จากผลตรวจปัสสาวะมีเม็ดเลือดแดง (RBC) และ RBC cast ซึ่งบ่งชี้ถึง Glomerulonephritis พยาธิกำเนิดของโรคเกิดจากการที่มี IgA immune complex ไปสะสมที่ผนังหลอดเลือดเล็กๆ ดังนั้น การสืบค้นที่จำเพาะที่สุดในการยืนยันการวินิจฉัยคือการตัดชิ้นเนื้อจากบริเวณผื่นไปตรวจ (Skin biopsy) ซึ่งจะพบการอักเสบของหลอดเลือด (leukocytoclastic vasculitis) และเมื่อย้อมด้วยวิธี immunofluorescence จะพบการสะสมของ IgA"
+                    },
+                    {
+                        problem: "33. A 42-year-old man with sinusitis and a chronic cough for 2 months was treated with antibiotics but did not improve. X-rays show multiple cavity lesions, urinalysis reveals RBC casts, and C-ANCA is positive. What is the diagnosis?",
+                        img: "",
+                        choices: "Erythema nodusum///Microscopic pharyngitis///Systemic lupus erythematosus (SLE)///Granulomatosis with polyangiitis///Eosinophilic granulomatous with polyarteritis",
+                        answer: "Granulomatosis with polyangiitis",
+                        select: "",
+                        explain: "อาการไซนัสอักเสบเรื้อรัง (sinusitis) และไอเรื้อรัง (chronic cough) ที่ไม่ตอบสนองต่อยาปฏิชีวนะ, ภาพเอกซเรย์ปอดพบรอยโรคมีโพรงหลายแห่ง (multiple cavity lesions), พบ RBC casts ในปัสสาวะ ซึ่งบ่งชี้ถึงโรคไต, และผลตรวจ C-ANCA เป็นบวกอย่างชัดเจน ทั้งหมดนี้เป็นลักษณะจำเพาะของ Granulomatosis with polyangiitis (GPA) ซึ่งเป็นภาวะหลอดเลือดอักเสบที่ส่งผลต่อระบบทางเดินหายใจส่วนบน ส่วนล่าง และไต. [10]"
+                    },
+                    {
+                        problem: "34. In a middle-aged woman with elevated IgG levels, what is the underlying pathogenesis?",
+                        img: "",
+                        choices: "Autoantibody to BPAG1///Autoantibody to transglutaminase///Autoantibody to desmoplakin///Autoantibody to desmoglein 2///Autoantibody to desmoglein 1 and 3",
+                        answer: "Autoantibody to desmoglein 1 and 3",
+                        select: "",
+                        explain: "ในบริบทของโรคผิวหนังที่มีตุ่มน้ำพอง การที่ IgG สูงและมีตุ่มน้ำ แสดงถึงโรค autoimmune blistering diseases หากเป็นโรค Pemphigus Vulgaris, พยาธิกำเนิดคือการสร้าง autoantibody ต่อ desmoglein 1 และ 3 ซึ่งเป็นโปรตีนที่สำคัญในการยึดเกาะระหว่างเซลล์ผิวหนัง (desmosomes) ทำให้เกิดการหลุดลอกของเซลล์ (acantholysis) และเกิดตุ่มน้ำพองที่แตกง่าย. (ข้อนี้หากไม่ได้ระบุอาการเพิ่มเติมนอกจาก IgG สูง อาจทำให้ตีความได้หลายโรค แต่เมื่อดูข้อถัดไปจะเห็นความเชื่อมโยงกับ Pemphigus/Pemphigoid) [11]"
+                    },
+                    {
+                        problem: "35. The 60 years old man has tense blister and no oral mucosa involved. Tzanck smear reveals eosinophilic. What is the pathogenesis of this disease?",
+                        img: "",
+                        choices: "Antibody to desmoglein 1,3///Antibody to desmocollin///Antibody to BPAG2///Antibody to collagen VII///Antibody to intercellular cement",
+                        answer: "Antibody to BPAG2",
+                        select: "",
+                        explain: "ผู้ป่วยชายอายุ 60 ปี มีตุ่มน้ำตึง (tense blister) และไม่มีรอยโรคในช่องปาก (no oral mucosa involved) ร่วมกับผล Tzanck smear พบ eosinophil เป็นลักษณะจำเพาะของโรค Bullous Pemphigoid ซึ่งเป็นโรคตุ่มน้ำพองที่เกิดจากภูมิต้านทานตนเอง โดยมีพยาธิกำเนิดจากการสร้าง autoantibody ต่อโปรตีน BPAG2 (หรือ BP180/Collagen XVII) ซึ่งเป็นองค์ประกอบของ hemidesmosomes ที่ทำหน้าที่ยึด epidermis กับ dermis. [11]"
+                    },
+                    {
+                        problem: "36. Patient is presented with polycyclic, annular scaly erythematous lesion. Last year, she was diagnosed with Hypertension and was given Ca channel blocker. What is useful test to support diagnosis of this case?",
+                        img: "",
+                        choices: "Anti-Ro/SS-A antibody///C-ANCA///Anti-histone antibody///Ig A///CBC",
+                        answer: "Anti-Ro/SS-A antibody",
+                        select: "",
+                        explain: "ผื่นที่มีลักษณะเป็นรอยโรคสีแดงมีขุย (scaly erythematous lesion) รูปวงแหวน (annular) หรือหลายวงซ้อนกัน (polycyclic) ร่วมกับประวัติการใช้ยา Calcium channel blocker ซึ่งเป็นยาที่สามารถกระตุ้นให้เกิด Subacute Cutaneous Lupus Erythematosus (SCLE) ได้ การตรวจ Anti-Ro/SS-A antibody (หรือ anti-SSA/Ro) เป็นการตรวจที่สำคัญและมีความสัมพันธ์อย่างมากกับการวินิจฉัย SCLE. [11]"
+                    },
+                    {
+                        problem: "37. A 30-year-old female has a tender cutaneous nodule at leg for 5 days with low grade fever, malaise and arthralgia. The patient was prescribed oral contraceptive pills and NSAIDs to relieve dysmenorrhea for the 2 months. What is the cause of the symptom?",
+                        img: "",
+                        choices: "Oral contraceptives///NSAIDs///Tuberculosis///Streptococcus infection///HBV infection",
+                        answer: "Oral contraceptives",
+                        select: "",
+                        explain: "อาการมีตุ่มนูนใต้ผิวหนังที่ขาซึ่งเจ็บเมื่อสัมผัส (tender cutaneous nodule at leg), ไข้ต่ำๆ (low grade fever), อ่อนเพลีย (malaise) และปวดข้อ (arthralgia) เป็นอาการคลาสสิกของ Erythema nodosum ซึ่งเป็นปฏิกิริยาการอักเสบของชั้นไขมันใต้ผิวหนัง (panniculitis) ยาคุมกำเนิดชนิดรับประทาน (oral contraceptive pills) เป็นสาเหตุหนึ่งที่ทราบกันดีว่าสามารถกระตุ้นให้เกิด Erythema nodosum ได้. [11]"
+                    },
+                    {
+                        problem: "40. Patient coming with psoriasis was prescribed a third generation retinoid. Which of the following is the prescribed drug?",
+                        img: "",
+                        choices: "A. Tacrolimus///B. Anthralin///C. Calcineurin///D. Acitretin///E. Tazarotene",
+                        answer: "E. Tazarotene",
+                        select: "",
+                        explain: "ผู้ป่วยโรคสะเก็ดเงิน (Psoriasis) ได้รับการจ่ายยา Retinoid รุ่นที่สาม (third generation retinoid) ยา Tazarotene เป็น Retinoid ชนิดทาที่เป็นรุ่นที่สาม ซึ่งมีการออกฤทธิ์เฉพาะเจาะจงกับ Psoriasis และเป็นยาทางเลือกหนึ่งในการรักษาโรคนี้ [42]",
+                        state: false
+                    },
+                    {
+                        problem: "41. 45 year old women with hypertension treat with enalapril. Present with erythema edematous itching rash, swelling of mouth and tongue everyday for 3 months. อาการดีขึ้นตอนเย็น What is the pathogenesis of this disease?",
+                        img: "",
+                        choices: "A. IgE autoantibody///B. IL-4///C. IL-1///D. C1 esterase inhibitor deficiency///E. Bradykinin",
+                        answer: "E. Bradykinin",
+                        select: "",
+                        explain: "ผู้ป่วยหญิงอายุ 45 ปี ที่มีภาวะความดันโลหิตสูงและรับประทานยา Enalapril(ยาในกลุ่ม ACE inhibitor) แล้วมีอาการผื่นแดง บวม คัน และมีอาการบวมที่ปากและลิ้น เป็นอาการที่เข้าได้กับ Angioedema ที่เกิดจากยา ACE inhibitor กลไกการเกิดคือยา ACE inhibitor จะยับยั้งเอนไซม์ที่ทำลาย Bradykinin ทำให้ Bradykinin สะสมในร่างกายมากขึ้น ซึ่งเป็นสาเหตุของการเกิด Angioedema [43]",
+                        state: false
+                    },
+                    {
+                        problem: "42. Diffused colicky abdominal pain & rash 3 days ต่อมาตรวจเจอเป็นผื่นเลือด+ generalized abdominal tenderness ผลแลป RBC 5-10 RBC cast, then fever for 5 days ส่งตรวจอะไร",
+                        img: "",
+                        choices: "A. Throat swab///B. CBC///C. Urinalysis///D. Skin biopsy for IgA///E. Abdominal film",
+                        answer: "D. Skin biopsy for IgA",
+                        select: "",
+                        explain: "ผู้ป่วยที่มีอาการปวดท้องแบบปวดบิด ผื่นแดงที่กลายเป็นผื่นเลือดกดไม่จาง(purpuric rash) ปวดท้องทั่วๆ ไป และมีผลตรวจปัสสาวะพบเม็ดเลือดแดง(RBC 5- 10) และ RBC cast ร่วมกับไข้ เป็นลักษณะที่เข้าได้กับ Henoch - Schönlein Purpura(HSP) หรือ IgA vasculitis ซึ่งเป็นภาวะหลอดเลือดอักเสบที่เกิดจากการสะสมของ IgA complex การวินิจฉัยยืนยันทำได้โดยการทำ Biopsy ผิวหนังหรือไตแล้วตรวจหาการสะสมของ IgA ด้วย Immunofluorescence[44]",
+                        state: false
+                    },
+                    {
+                        problem: "53. ชาย15ปี diffuse colicky abdominal pain and rash for 3 days PE : palpable purpura ที่ขาสองข้าง เป็นไข้เจ็บคอ5วันก่อน Lab : RBC cast in urine ถาม most important investigation",
+                        img: "",
+                        choices: "A. Throat swab///B. CBC///C. Skin biopsy for IgA///D. Urine culture///E. Abdominal film",
+                        answer: "C. Skin biopsy for IgA",
+                        select: "",
+                        explain: "ผู้ป่วยชายอายุ 15 ปี มีอาการปวดท้องแบบปวดบิด ผื่นคันที่กลายเป็น Palpable purpura ที่ขาทั้งสองข้าง มีไข้และอาการเจ็บคอเมื่อ 5 วันก่อน และผลตรวจปัสสาวะพบ RBC cast ซึ่งเป็นลักษณะที่บ่งชี้ถึง Henoch - Schönlein Purpura(HSP) หรือ IgA vasculitis การตรวจที่สำคัญที่สุดเพื่อยืนยันการวินิจฉัยคือการทำ Skin biopsy เพื่อตรวจหาการสะสมของ IgA ในหลอดเลือดขนาดเล็กที่ผิวหนัง[55]",
+                        state: false
+                    },
+                    {
+                        problem: "56. A 60-year-old man presented with tense blisters on abdomen and low legs, No mucosal was seen. showed many eosinophils. what is the pathogenesis?",
+                        img: "",
+                        choices: "A. Antibody to BPAG2///B. Antibody to desmoplakin///C. Antibody to desmocollin///D. Antibody to desmoglein 1 and 3///E. Antibody to transglutaminase",
+                        answer: "A. Antibody to BPAG2",
+                        select: "",
+                        explain: "ผู้ป่วยชายอายุ 60 ปี มีตุ่มน้ำพองตึง(tense blisters) ที่ท้องและขาส่วนล่าง โดยไม่มีรอยโรคในเยื่อบุอ่อน และพบเซลล์เม็ดเลือดขาวชนิด Eosinophils จำนวนมากจากการตรวจชิ้นเนื้อ เป็นลักษณะจำเพาะของโรค Bullous Pemphigoid ซึ่งเป็นโรคผิวหนังตุ่มน้ำพองจากภูมิคุ้มกันผิดปกติ กลไกการเกิดโรคคือมีการสร้าง Autoantibody ที่จำเพาะต่อโปรตีน BPAG2(หรือ BP180) ซึ่งเป็นส่วนประกอบของ Hemidesmosomes ที่เชื่อมต่อผิวหนังชั้น Epidermis กับ Dermis ทำให้เกิดการแยกตัวของผิวหนังเป็นตุ่มน้ำ[58]",
+                        state: false
+                    },
+                    {
+                        problem: "59. Patients มาที่โรงบาลด้วยอาการบลาๆๆ เจอ livedo reticularis ถามว่าเป็นอะไร",
+                        img: "",
+                        choices: "A. Wegener's granulomatosis///B. Churg-Strauss syndrome///C. Henoch-Schonlein purpura///D. Polyarteritis nodosa///E. Giant cell arteritis",
+                        answer: "D. Polyarteritis nodosa",
+                        select: "",
+                        explain: "ผู้ป่วยที่มีอาการ Livedo reticularis ซึ่งเป็นลักษณะของผิวหนังที่มีลายเป็นร่างแหสีม่วงแดง มักบ่งชี้ถึงภาวะที่เกี่ยวข้องกับความผิดปกติของหลอดเลือด เช่น Vasculitis(หลอดเลือดอักเสบ) หนึ่งในโรคที่พบบ่อยและมีความสัมพันธ์โดยตรงกับ Livedo reticularis คือ Polyarteritis nodosa(PAN) ซึ่งเป็นภาวะหลอดเลือดแดงขนาดกลางอักเสบชนิด Necrotizing vasculitis ที่สามารถส่งผลต่ออวัยวะต่างๆ ได้[61]",
+                        state: false
+                    },
+                    {
+                        problem: "51. A 45 years old woman was found with annular/polycyclic, no fever and other symptoms. What test should be done?",
+                        img: "",
+                        choices: "A. ESR///B. Anti-Ro/SS-A///C. Anti-histone Ab///D. Complement level///E. C-ANCA",
+                        answer: "B. Anti-Ro/SS-A",
+                        select: "",
+                        explain: "ผู้ป่วยหญิงอายุ 45 ปี มีผื่นผิวหนังเป็นวง(annular) หรือหลายวงเชื่อมกัน(polycyclic) โดยไม่มีไข้หรืออาการอื่นๆ เป็นลักษณะที่อาจพบได้ใน Subacute Cutaneous Lupus Erythematosus(SCLE) ซึ่งเป็นชนิดย่อยของโรค Lupus erythematosus ที่มักมีผื่นผิวหนังเป็นหลัก การตรวจ Anti - Ro / SS - A antibody เป็นการตรวจจำเพาะที่สำคัญสำหรับการวินิจฉัย SCLE",
+                        state: false
+                    },
+                    {
+                        problem: "52. ชายวัยกลางคนมีอาการ numbness of hands ตอนอยู่ในที่อากาศหนาว ทุกนิ้วยกเว้นนิ้วโป้งของทั้ง 2 มือ were marked pallor during the attacks และนิ้วจะกลับมาเป็นสีแดงอีกครั้งหลังให้ความอุ่นไป 30 นาที What is the patogenesis?",
+                        img: "",
+                        choices: "A. Neurologic syndrome///B. Thrombosis///C. Vasculitis///D. Vasospasm///E. Cold hypersensitivity",
+                        answer: "D. Vasospasm",
+                        select: "",
+                        explain: "ผู้ป่วยชายวัยกลางคนมีอาการมือชาเมื่อสัมผัสอากาศหนาวเย็น โดยนิ้วมือซีดขาว(pallor) ยกเว้นนิ้วโป้ง แล้วเปลี่ยนเป็นสีแดงหลังได้รับความอบอุ่น เป็นอาการที่เข้าได้กับ Raynaud's phenomenon ซึ่งเกิดจากภาวะหลอดเลือดหดเกร็งผิดปกติ (Vasospasm) ของหลอดเลือดขนาดเล็กในนิ้วมือหรือนิ้วเท้าตอบสนองต่อความเย็นหรือความเครียด",
+                        state: false
+                    },
+                    {
+                        problem: "53. A 42-year-old man has past history: oral ulcer and chronic cough, chest x-ray was performed and showed multiple lung nodules, Urinalysis: casted RBC, C-ANCA: positive. What is the most correct diagnosis?",
+                        img: "",
+                        choices: "A. Wegener's granulomatosis///B. Henoch-Schonlein purpura///C. Polyarteritis nodosa///D. Nodular vasculitis///E. Churg-Strauss",
+                        answer: "A. Wegener's granulomatosis",
+                        select: "",
+                        explain: "ผู้ป่วยชายอายุ 42 ปี มีประวัติแผลในปาก ไอเรื้อรัง พบก้อนในปอดหลายก้อน(lung nodules) ตรวจปัสสาวะพบ casted RBC(บ่งชี้ไตอักเสบ) และ C - ANCA เป็นบวก เป็นอาการที่เข้าได้กับ Granulomatosis with Polyangiitis(GPA) หรือเดิมเรียกว่า Wegener's granulomatosis ซึ่งเป็นโรคหลอดเลือดอักเสบที่ส่งผลกระทบต่อระบบทางเดินหายใจส่วนบนและล่าง และไต มักพบว่าสัมพันธ์กับ C-ANCA",
+                        state: false
+                    },
+                    {
+                        problem: "54. A 30-year-old female has a tender cutaneous nodule for 5 days with low grade fever, malaise and arthralgia. The patient was prescribed oral contraceptive pills and NSAIDs to relieve dysmenorrhea for the 2 months. What is the cause of the symptom?",
+                        img: "",
+                        choices: "A. Oral contraceptive pill///B. NSAIDS///C. Tuberculosis///D. Streptococcus///E. HBV",
+                        answer: "A. Oral contraceptive pill",
+                        select: "",
+                        explain: "ผู้ป่วยหญิงอายุ 30 ปี มีก้อนใต้ผิวหนังที่กดเจ็บ(tender cutaneous nodule) ร่วมกับไข้ต่ำๆ อ่อนเพลีย และปวดข้อ และมีประวัติใช้ยาคุมกำเนิดชนิดรับประทาน(oral contraceptive pills) มา 2 เดือน อาการเหล่านี้เข้าได้กับ Erythema Nodosum ซึ่งเป็นภาวะที่มีการอักเสบของไขมันใต้ผิวหนัง โดยยาคุมกำเนิดเป็นสาเหตุที่ทราบกันดีว่าเป็นตัวกระตุ้นให้เกิด Erythema Nodosum ได้",
+                        state: false
+                    },
+                    {
+                        problem: "55. A 55-year-old woman has low grade fever, generalized arthralgia and myalgia for 2 weeks, pleuritic chest pain without skin lesions, and has inflammatory bowel disease. She was treated with TNF for 4 years, lab tests showed anemia and lymphocytopenia. What is the most useful investigation?",
+                        img: "",
+                        choices: "A. Anti-histone antibody///B. ANA///C. C-ANCA///D. ESR///E. level",
+                        answer: "A. Anti-histone antibody",
+                        select: "",
+                        explain: "ผู้ป่วยหญิงอายุ 55 ปี มีไข้ต่ำๆ ปวดข้อ ปวดกล้ามเนื้อ ปวดหน้าอกแบบ pleuritic pain และมีประวัติเป็นโรคลำไส้อักเสบเรื้อรัง(IBD) และได้รับการรักษาด้วยยา TNF inhibitors มา 4 ปี ซึ่งเป็นปัจจัยเสี่ยงของการเกิด Drug - induced lupus erythematosus ซึ่งเป็นภาวะแทรกซ้อนที่สำคัญของยา TNF inhibitors การตรวจ Anti - histone antibody เป็นการตรวจที่สำคัญและมีประโยชน์มากที่สุดในการวินิจฉัยภาวะ Drug - induced lupus",
+                        state: false
+                    },
+                    {
+                        problem: "57. A 31 year-old patients presented with erythematous, itching lesion, as figure (รูปน่าจะเป็น Psoriasis) What is causative of skin lesion?",
+                        img: "https://drive.google.com/open?id=1K5KBCNCe30y5u1c7n3dnCHNmXD_CERLW&usp=drive_copy",
+                        choices: "A. Contact irritants///B. Bacteria///C. Fungi///D. Virus///E. Unknown",
+                        answer: "E. Unknown",
+                        select: "",
+                        explain: "ผื่นที่ผิวหนังเป็นรอยแดงมีขุยสะเก็ดสีเงิน(erythematous plaques with silvery scales) ดังภาพ เป็นลักษณะของโรค Psoriasis ซึ่งเป็นโรคผิวหนังอักเสบเรื้อรังที่เกิดจากความผิดปกติของระบบภูมิคุ้มกัน(immune dysregulation) โดยมีปัจจัยทางพันธุกรรมและสิ่งแวดล้อมเข้ามาเกี่ยวข้อง สาเหตุที่แท้จริงของการเกิดโรคจึงไม่ถูกระบุว่าเป็นเชื้อโรคภายนอก(bacteria, fungi, virus) หรือสารก่อการระคายเคือง(contact irritants) โดยตรง ดังนั้น 'Unknown'(ไม่ทราบสาเหตุ) เป็นตัวเลือกที่สะท้อนถึงความซับซ้อนของกลไกการเกิดโรคได้ดีที่สุดในบริบทนี้",
+                        state: false
+                    },
+                    {
+                        problem: "59. ให้ภาพแผลคนไข้มา มีสองโซน เป็นโซนแดง แล้วคล้ำหน่อยตรงกลาง น่าจะเป็น erythema multiforme. ถามว่าจะตรวจจอะไร",
+                        img: "",
+                        choices: "A. VRDL///B. Mycoplasma titer///C. ESR///D. CRP///E. ",
+                        answer: "B. Mycoplasma titer",
+                        select: "",
+                        explain: "ผู้ป่วยมีแผลที่ผิวหนังเป็นสองโซน มีขอบนอกสีแดงและส่วนกลางสีคล้ำขึ้น ซึ่งคาดว่าเป็น Erythema multiforme(EM) EM เป็นปฏิกิริยาภูมิไวเกินที่มักเกิดจากการติดเชื้อ โดยเฉพาะอย่างยิ่งการติดเชื้อ Herpes simplex virus(HSV) และ Mycoplasma pneumoniae การตรวจ Mycoplasma titer เป็นการตรวจที่สำคัญเพื่อหาสาเหตุของการติดเชื้อ Mycoplasma pneumoniae ซึ่งเป็นสาเหตุที่พบบ่อยของ EM",
+                        state: false
+                    }
                 ]
+
             }
 
 
@@ -8810,7 +9219,7 @@
             const checkboxIds = ['skin52fmt1', 'skin52fmt2', 'skin52fmt3', 'skin51mcq1', 'skin50mcq1', 'skin49mcq1', 'skin48mcq1', 'skin51mcq2', 'skin50mcq2', 'skin49mcq2', 'skin48mcq2', 'skin51mcq3', 'skin50mcq3', 'skin49mcq3', 'skin48mcq3', 'L09-12_Skin_Tumor', 'L13_35_Acne_Melasma', 'L14_15_Skin_injury',
                 'L16-19_Bacterial_skin_disease', 'L20_21_34_Virus_skin_disease', 'L22_34_Fungi_skin_disease',
                 'L23-25_32_33_Arthropod_skin_disease', 'L26_Parasite_skin_disease', 'L8_27-29_Dermal_inflammation',
-                'L30_31_Common_surgical_skin_condition', 'L32_33_Topical_drug', 'L36_Topical_steroid', 'Psoriasis'
+                'L30_31_Common_surgical_skin_condition', 'L32_33_Topical_drug', 'L36_Topical_steroid', 'Psoriasis', 'Autoimmune_Skin_Disease'
             ];
 
             allQuestions = questionSets.flat(); // Master list of all questions
